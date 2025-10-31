@@ -1,37 +1,59 @@
-<section class="hero">
-  <!-- 왼쪽: 사진 -->
-  <div class="hero-left">
-    <div class="avatar">
-      <img src="/assets/profile.jpg" alt="Heimin Kang portrait">
-    </div>
-  </div>
+/* --- Hero layout: image left, text right --- */
+.hero {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 46px;
+  align-items: center;
+  padding: 64px 0 24px;
+}
 
-  <!-- 오른쪽: 텍스트 -->
-  <div class="hero-right">
-    <h1 class="h1">Hello, I’m Heimin.</h1>
-    <p class="lead">I design system-level interventions for AI in mental healthcare.</p>
+@media (max-width:900px){
+  .hero { grid-template-columns: 1fr; text-align: left; }
+}
 
-    <div class="section">
-      <div class="kicker">Focus</div>
-      <p class="sub">
-        I explore how AI can responsibly support people and supporters across the mental healthcare journey.  
-        My work blends systems thinking, cognitive ergonomics, and design-led research to improve access,  
-        referrals, and collaboration in real clinical contexts.
-      </p>
+/* 프로필 사진 */
+.avatar {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--muted);
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+}
 
-      <div class="keywords">
-        <span class="tag">GP–GGZ referrals</span>
-        <span class="tag">Cognitive ergonomics</span>
-        <span class="tag">Responsible AI</span>
-        <span class="tag">Regulatory mapping (GDPR · AI Act · EHDS)</span>
-        <span class="tag">System mapping</span>
-        <span class="tag">Co-design</span>
-      </div>
-    </div>
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    <div class="cta">
-      <a class="btn" href="/portfolio.html">View Portfolio</a>
-      <a class="btn secondary" href="/cv.html">View CV</a>
-    </div>
-  </div>
-</section>
+@media (max-width:900px){
+  .avatar {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Focus / keywords */
+.lead {
+  font-size: 20px;
+  line-height: 1.45;
+  margin: 8px 0 10px;
+  color: var(--fg);
+  letter-spacing: -.01em;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.keywords .tag {
+  font-size: .85rem;
+  opacity: 1;
+}
