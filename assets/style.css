@@ -293,3 +293,15 @@ a {
   margin-top: 36px;
   text-align: center;
 }
+/* === Home-only: text hero without image === */
+.home .hero{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:24px;
+  align-items:start;
+  padding:64px 0 24px;
+}
+.home .h1{font-size:42px;line-height:1.15;margin:14px 0 10px;font-weight:700;letter-spacing:-.02em}
+.home .lead{font-size:20px;line-height:1.45;margin:8px 0 10px;letter-spacing:-.01em;color:var(--fg)}
+.home .keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.home .keywords .tag{font-size:.85rem;opacity:1}
