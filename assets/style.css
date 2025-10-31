@@ -305,3 +305,21 @@ a {
 .home .lead{font-size:20px;line-height:1.45;margin:8px 0 10px;letter-spacing:-.01em;color:var(--fg)}
 .home .keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .home .keywords .tag{font-size:.85rem;opacity:1}
+
+/* --- Fix brand color + position consistency --- */
+
+/* 1️⃣ Heimin Kang (왼쪽 상단 글자) - 검정색 + 두껍게 */
+.nav .brand a {
+  color: var(--fg);           /* 검정색 (기존 body text color) */
+  font-weight: 700;           /* 더 두껍게 */
+  text-decoration: none;      /* 혹시 밑줄 있을 경우 제거 */
+}
+
+/* 2️⃣ 모든 페이지에서 nav 컨테이너 정렬 동일하게 */
+.nav .container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;           /* 좌우 여백 동일하게 맞춤 */
+  box-sizing: border-box;
+}
+
