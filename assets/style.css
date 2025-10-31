@@ -41,9 +41,8 @@ a {
   top: 0;
   z-index: 20;
   backdrop-filter: saturate(180%) blur(14px);
-  background: rgba(255, 255, 255, 0.7);
-  border-bottom: none; /* 선 제거 */
-  box-shadow: none; /* 그림자 제거 */
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03); /* 그림자 제거 */
 }
 
 .nav-inner {
