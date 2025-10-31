@@ -378,21 +378,3 @@ a {
 .details p:first-child {
   margin-top: 6px;
 }
-
-/* LinkedIn mini icon */
-.linkedin-icon {
-  display: inline-block;
-  margin-left: 8px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #0077b5; /* LinkedIn blue */
-  border: 1px solid #0077b5;
-  border-radius: 4px;
-  padding: 0 5px;
-  line-height: 1.1;
-  transition: all 0.2s ease;
-}
-.linkedin-icon:hover {
-  background: #0077b5;
-  color: #fff;
-}
