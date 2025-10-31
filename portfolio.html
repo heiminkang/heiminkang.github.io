@@ -1,38 +1,93 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/style.css" />
   <title>Portfolio — Heimin Kang</title>
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="description" content="Selected projects by Heimin Kang — research & strategic design" />
 </head>
 <body>
+
+  <!-- Nav -->
   <div class="nav">
     <div class="container nav-inner">
       <div class="brand"><a href="/">Heimin Kang</a></div>
       <div>
         <a href="/cv.html">CV</a>
         <a href="/publications.html">Publications</a>
-        <a class="active" href="/portfolio.html">Portfolio</a>
+        <a href="/portfolio.html" class="active">Portfolio</a>
       </div>
     </div>
   </div>
 
   <main class="container">
-    <h1>Portfolio</h1>
-    <div class="grid">
-      <div class="card"><h3>HospiTALK</h3><p>Platform for flexible scheduling in clinical environments.</p></div>
-      <div class="card"><h3>E-mental Health Regulation Map</h3><p>Visualizing GDPR, AI Act, and EHDS implications.</p></div>
-      <div class="card"><h3>Sentiment-Integrated Patient Journey</h3><p>Mapping emotions and system interactions in care journeys.</p></div>
-    </div>
-  </main>
-    <!-- 섹션 아래 구분선 + 가운데 정렬 푸터 -->
+    <header class="pub-header" style="margin-top:10px">
+      <h1 class="h1" style="margin:0">Selected Work</h1>
+      <p class="sub" style="margin:6px 0 0">Research & strategic design projects</p>
+    </header>
 
-  <footer class="footer">
-    <p>
-      © Heimin Kang ·
-      <a href="mailto:heimin.kang@gmail.com">heimin.kang@gmail.com</a> ·
-      <a href="https://www.linkedin.com/in/heiminkang/" target="_blank" rel="noopener">LinkedIn</a>
-    </p>
-  </footer>
+    <!-- 카드 그리드 -->
+    <section class="cards-grid">
+      <!-- Card 1 -->
+      <a class="card card-link" href="#" title="Open project">
+        <figure class="card-thumb">
+          <img src="/assets/portfolio/hospitalk.jpg" alt="HospiTALK scheduling platform mockup">
+          <span class="badge">2025</span>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title">HospiTALK</h3>
+          <p class="card-desc">Flexible scheduling platform for clinical environments; improving staff autonomy and coordination.</p>
+          <div class="chips">
+            <span class="chip">Healthcare</span>
+            <span class="chip">Service design</span>
+            <span class="chip">Systems</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a class="card card-link" href="#" title="Open project">
+        <figure class="card-thumb">
+          <img src="/assets/portfolio/regulation-map.jpg" alt="E-mental health regulation map visual">
+          <span class="badge">2024–25</span>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title">E-mental Health Regulation Map</h3>
+          <p class="card-desc">Visual mapping of GDPR, AI Act, and EHDS implications for mental health solutions.</p>
+          <div class="chips">
+            <span class="chip">Policy × Design</span>
+            <span class="chip">Data-enabled</span>
+            <span class="chip">Ethics</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a class="card card-link" href="#" title="Open project">
+        <figure class="card-thumb">
+          <img src="/assets/portfolio/sentiment-journey.jpg" alt="Sentiment-integrated patient journey visual">
+          <span class="badge">2025</span>
+        </figure>
+        <div class="card-body">
+          <h3 class="card-title">Sentiment-Integrated Patient Journey</h3>
+          <p class="card-desc">Combining forum narratives, topic–sentiment analysis, and time-value mapping into a decision aid.</p>
+          <div class="chips">
+            <span class="chip">AI for insights</span>
+            <span class="chip">Visualization</span>
+            <span class="chip">Participatory</span>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <hr class="divider" />
+
+    <footer class="footer">
+      <p>© Heimin Kang · <a href="mailto:heimin.kang@gmail.com">heimin.kang@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/heiminkang/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </footer>
+  </main>
 </body>
 </html>
