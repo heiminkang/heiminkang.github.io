@@ -50,3 +50,16 @@ a{color:inherit;text-decoration:none}
 .metrics .big{font-size:22px;font-weight:700}
 
 .footer{padding:40px 0;color:var(--sub);font-size:.9rem;border-top:1px dashed var(--line);margin-top:36px}
+
+/* --- Publications page typography (Apple-like) --- */
+.pub h1{font-size:32px;letter-spacing:-.02em;margin:18px 0}
+.pub-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:18px 0}
+.pub .rule{border:0;border-top:1px solid var(--line);margin:12px 0 24px}
+.pub .subhead{margin:18px 0 8px}
+.pub .pub-list{padding-left:24px;margin:8px 0 12px}
+.pub .pub-bullets{margin:4px 0 8px 20px}
+.pub .pub-list li,.pub .pub-bullets li{margin:6px 0 10px}
+.pub .authors{font-variant-numeric:oldstyle-nums}
+.pub .title{font-weight:600}
+.pub .venue{color:var(--sub)}
+.serif{font-family:ui-serif, "Georgia", "Times New Roman", Times, serif}
