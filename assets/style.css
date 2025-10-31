@@ -43,7 +43,7 @@ a {
   backdrop-filter: saturate(180%) blur(14px);
   background: rgba(255, 255, 255, 0.7);
   border-bottom: none; /* 선 제거 */
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06); /* 부드러운 얇은 그림자 */
+  box-shadow: none; /* 그림자 제거 */
 }
 
 .nav-inner {
@@ -291,9 +291,12 @@ a {
   padding-top: 14px; /* 줄과 텍스트 간격 */
   margin: 60px auto 40px;
   max-width: var(--max);
+  padding-left: 24px;                   /* 컨테이너와 동일 좌우 여백 */
+  padding-right: 24px; 
+  box-sizing: border-box;               /* 패딩 포함 너비 계산 */
+  text-align: center;   
   font-size: 0.9rem;
   color: var(--sub);
-  text-align: center; /* 중앙 정렬 */
   line-height: 1.6; /* 줄간격 살짝 여유 */
 }
 
