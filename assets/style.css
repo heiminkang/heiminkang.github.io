@@ -1,17 +1,90 @@
-/* --- Hero layout: image left, text right --- */
+/* --- Apple-esque clean UI --- */
+:root {
+  --bg: #fff;
+  --fg: #111;
+  --sub: #555;
+  --line: rgba(0, 0, 0, 0.08);
+  --muted: #f6f7f8;
+  --accent: #111;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --max: 1120px;
+  --radius: 18px;
+  --gap: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Inter, Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* --- Navigation --- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: saturate(180%) blur(14px);
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.nav a {
+  margin-left: 18px;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.nav a:hover,
+.nav a.active {
+  opacity: 1;
+}
+
+/* --- Hero layout (image left, text right) --- */
 .hero {
   display: grid;
-  grid-template-columns: .8fr 1.2fr;
+  grid-template-columns: 0.8fr 1.2fr;
   gap: 46px;
   align-items: center;
   padding: 64px 0 24px;
 }
 
-@media (max-width:900px){
-  .hero { grid-template-columns: 1fr; text-align: left; }
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
 }
 
-/* 프로필 사진 */
+/* Profile image */
 .avatar {
   width: 260px;
   height: 260px;
@@ -29,7 +102,7 @@
   object-fit: cover;
 }
 
-@media (max-width:900px){
+@media (max-width: 900px) {
   .avatar {
     width: 180px;
     height: 180px;
@@ -37,13 +110,33 @@
   }
 }
 
-/* Focus / keywords */
+/* Hero text */
+.h1 {
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 14px 0 10px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 .lead {
   font-size: 20px;
   line-height: 1.45;
   margin: 8px 0 10px;
   color: var(--fg);
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
+}
+
+.kicker {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.sub {
+  color: var(--sub);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .keywords {
@@ -53,7 +146,150 @@
   margin-top: 10px;
 }
 
-.keywords .tag {
-  font-size: .85rem;
-  opacity: 1;
+.tag {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* --- Buttons --- */
+.cta {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 11px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--fg);
+  color: #fff;
+  box-shadow: var(--shadow);
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--fg);
+}
+
+/* --- Section & Grid --- */
+.section {
+  padding: 32px 0;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Cards --- */
+.card {
+  background: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+
+.card a {
+  display: block;
+  padding: 18px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+/* --- Publications & CV Page Typography --- */
+.pub h1 {
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  margin: 18px 0;
+}
+
+.pub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.pub .rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 12px 0 24px;
+}
+
+.pub .subhead {
+  margin: 18px 0 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 0.02em;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+}
+
+.pub .pub-list {
+  padding-left: 24px;
+  margin: 8px 0 12px;
+}
+
+.pub .pub-list li {
+  margin: 6px 0 10px;
+}
+
+.pub .authors {
+  font-variant-numeric: oldstyle-nums;
+}
+
+.pub .title {
+  font-weight: 600;
+}
+
+.pub .venue {
+  color: var(--sub);
+}
+
+.serif {
+  font-family: ui-serif, "Georgia", "Times New Roman", Times, serif;
+}
+
+/* --- Footer --- */
+.footer {
+  padding: 40px 0;
+  color: var(--sub);
+  font-size: 0.9rem;
+  border-top: 1px dashed var(--line);
+  margin-top: 36px;
+  text-align: center;
 }
