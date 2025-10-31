@@ -12,9 +12,7 @@
   --gap: 30px;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html, body {
   margin: 0;
@@ -24,16 +22,9 @@ html, body {
   font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Inter, Arial, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
 
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 24px;
-}
+.container { max-width: var(--max); margin: 0 auto; padding: 24px; }
 
 /* --- Navigation --- */
 .nav {
@@ -42,7 +33,7 @@ a {
   z-index: 20;
   backdrop-filter: saturate(180%) blur(14px);
   background: rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid var(--line);
+  border-bottom: none; /* 헤더 밑줄 제거 */
 }
 
 .nav-inner {
@@ -52,10 +43,9 @@ a {
   padding: 12px 0;
 }
 
-.brand {
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
+.brand { font-weight: 700; letter-spacing: 0.2px; }
+
+.brand a { opacity: 1; font-weight: 700; } /* 브랜드 링크는 항상 진하게 */
 
 .nav a {
   margin-left: 18px;
@@ -64,9 +54,7 @@ a {
 }
 
 .nav a:hover,
-.nav a.active {
-  opacity: 1;
-}
+.nav a.active { opacity: 1; }
 
 /* --- Hero layout (image left, text right) --- */
 .hero {
@@ -78,10 +66,7 @@ a {
 }
 
 @media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
+  .hero { grid-template-columns: 1fr; text-align: left; }
 }
 
 /* Profile image */
@@ -96,18 +81,10 @@ a {
   margin: 0 auto;
 }
 
-.avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
 
 @media (max-width: 900px) {
-  .avatar {
-    width: 180px;
-    height: 180px;
-    margin-bottom: 20px;
-  }
+  .avatar { width: 180px; height: 180px; margin-bottom: 20px; }
 }
 
 /* Hero text */
@@ -127,17 +104,9 @@ a {
   letter-spacing: -0.01em;
 }
 
-.kicker {
-  font-size: 0.9rem;
-  opacity: 0.75;
-  margin-bottom: 6px;
-}
+.kicker { font-size: 0.9rem; opacity: 0.75; margin-bottom: 6px; }
 
-.sub {
-  color: var(--sub);
-  font-size: 1rem;
-  line-height: 1.6;
-}
+.sub { color: var(--sub); font-size: 1rem; line-height: 1.6; }
 
 .keywords {
   display: flex;
@@ -156,12 +125,7 @@ a {
 }
 
 /* --- Buttons --- */
-.cta {
-  margin-top: 18px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+.cta { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
 
 .btn {
   padding: 11px 16px;
@@ -172,43 +136,16 @@ a {
   box-shadow: var(--shadow);
   transition: 0.2s ease;
 }
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-.btn.secondary {
-  background: transparent;
-  color: var(--fg);
-}
+.btn:hover { opacity: 0.9; }
+.btn.secondary { background: transparent; color: var(--fg); }
 
 /* --- Section & Grid --- */
-.section {
-  padding: 32px 0;
-}
+.section { padding: 32px 0; }
+.section h2 { font-size: 22px; margin: 0 0 10px; }
 
-.section h2 {
-  font-size: 22px;
-  margin: 0 0 10px;
-}
-
-.grid {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: repeat(3, 1fr);
-}
-
-@media (max-width: 1000px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
+.grid { display: grid; gap: var(--gap); grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .grid { grid-template-columns: 1fr; } }
 
 /* --- Cards --- */
 .card {
@@ -218,23 +155,11 @@ a {
   overflow: hidden;
   transition: 0.2s ease;
 }
-
-.card a {
-  display: block;
-  padding: 18px;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
-}
+.card a { display: block; padding: 18px; }
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 
 /* --- Publications & CV Page Typography --- */
-.pub h1 {
-  font-size: 32px;
-  letter-spacing: -0.02em;
-  margin: 18px 0;
-}
+.pub h1 { font-size: 32px; letter-spacing: -0.02em; margin: 18px 0; }
 
 .pub-header {
   display: flex;
@@ -244,11 +169,7 @@ a {
   margin: 18px 0;
 }
 
-.pub .rule {
-  border: 0;
-  border-top: 1px solid var(--line);
-  margin: 12px 0 24px;
-}
+.pub .rule { border: 0; border-top: 1px solid var(--line); margin: 12px 0 24px; }
 
 .pub .subhead {
   margin: 18px 0 8px;
@@ -259,86 +180,14 @@ a {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
 }
 
-.pub .pub-list {
-  padding-left: 24px;
-  margin: 8px 0 12px;
-}
+.pub .pub-list { padding-left: 24px; margin: 8px 0 12px; }
+.pub .pub-list li { margin: 6px 0 10px; }
+.pub .authors { font-variant-numeric: oldstyle-nums; }
+.pub .title { font-weight: 600; }
+.pub .venue { color: var(--sub); }
+.serif { font-family: ui-serif, "Georgia", "Times New Roman", Times, serif; }
 
-.pub .pub-list li {
-  margin: 6px 0 10px;
-}
-
-.pub .authors {
-  font-variant-numeric: oldstyle-nums;
-}
-
-.pub .title {
-  font-weight: 600;
-}
-
-.pub .venue {
-  color: var(--sub);
-}
-
-.serif {
-  font-family: ui-serif, "Georgia", "Times New Roman", Times, serif;
-}
-
-/* --- Footer --- */
-.footer {
-  padding: 40px 0;
-  color: var(--sub);
-  font-size: 0.9rem;
-  border-top: 1px dashed var(--line);
-  margin-top: 36px;
-  text-align: center;
-}
-/* === Home-only: text hero without image === */
-.home .hero{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap:24px;
-  align-items:start;
-  padding:64px 0 24px;
-}
-.home .h1{font-size:42px;line-height:1.15;margin:14px 0 10px;font-weight:700;letter-spacing:-.02em}
-.home .lead{font-size:20px;line-height:1.45;margin:8px 0 10px;letter-spacing:-.01em;color:var(--fg)}
-.home .keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.home .keywords .tag{font-size:.85rem;opacity:1}
-
-/* --- Home hero with image + text --- */
-.home .hero {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 48px;
-  align-items: center;
-  padding: 80px 0;
-}
-
-.home .figure {
-  width: 100%;
-  max-width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto;
-  border: 1px solid var(--line);
-  background: var(--muted);
-}
-
-.home .figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.home .cta {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-/* --- Home(hero) : image left + text right --- */
+/* --- Home(hero) : image left + text right (중복 정리된 최종 버전) --- */
 .home .hero{
   display:grid;
   grid-template-columns:.9fr 1.1fr;
@@ -346,7 +195,6 @@ a {
   align-items:center;
   padding:80px 0;
 }
-
 .home .avatar{
   width:320px;height:320px;border-radius:50%;
   overflow:hidden;border:1px solid var(--line);
@@ -354,57 +202,38 @@ a {
   margin:0 auto;
 }
 .home .avatar img{width:100%;height:100%;object-fit:cover}
-
 @media (max-width:900px){
   .home .hero{grid-template-columns:1fr}
   .home .avatar{width:200px;height:200px;margin-bottom:16px}
 }
 
-/* LinkedIn 버튼(선택) */
-.btn.linkedin:hover{opacity:.95;box-shadow:var(--shadow)}
-
 /* --- smaller detail text block --- */
-.details {
-  margin-top: 4px;
-}
-
-.details p {
-  font-size: 0.9rem;       /* 글자 크기 줄이기 */
-  line-height: 1.3;        /* 줄간격 줄이기 */
-  margin: 2px 0;           /* 위아래 간격 줄이기 */
-  opacity: 0.8;            /* 살짝 흐리게 */
-}
-
-.details p:first-child {
-  margin-top: 6px;
-}
-
-
-/* Divider line between main content and footer */
-.divider {
-  border: none;
-  border-top: 1px solid var(--line);
-  margin: 60px auto 40px;
-  width: 100%;
-  max-width: 900px; /* 좌우 여백 균형 맞춤 */
-}
-
-/* Footer */
-.footer {
-  text-align: center;
+.details { margin-top: 4px; }
+.details p{
   font-size: 0.9rem;
-  color: var(--sub);
-  margin-bottom: 40px;
-}
-
-.footer a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 2px;
-  transition: opacity 0.2s ease;
-}
-
-.footer a:hover {
+  line-height: 1.3;
+  margin: 2px 0;
   opacity: 0.8;
 }
+.details p:first-child { margin-top: 6px; }
+
+/* Divider (사용 안 하면 그대로 둬도 영향 없음) */
+.divider { border: none; }
+
+/* --- Footer (좌측 정렬 / 얇은 점선 1줄 / 본문 폭 정렬) --- */
+.footer{
+  border-top: 1px dashed var(--line);
+  padding-top: 24px;
+  margin: 60px auto 40px;
+  max-width: var(--max);
+  font-size: 0.9rem;
+  color: var(--sub);
+  text-align: left;
+}
+.footer a{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s ease;
+}
+.footer a:hover{ border-color: var(--line); }
