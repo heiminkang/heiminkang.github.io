@@ -6,68 +6,93 @@
 }
 
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);
-  font:16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Inter, Arial, sans-serif;}
+
+html,body{
+  margin:0; padding:0;
+  background:var(--bg); color:var(--fg);
+  font:16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  letter-spacing:-.01em;
+}
 
 a{color:inherit;text-decoration:none}
 .container{max-width:var(--max);margin:0 auto;padding:24px}
 
-.nav{position:sticky;top:0;z-index:20; backdrop-filter:saturate(180%) blur(14px);
-  background:rgba(255,255,255,.7); border-bottom:1px solid var(--line)}
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:20;
+  backdrop-filter:saturate(180%) blur(14px);
+  background:rgba(255,255,255,.7);
+  border-bottom:1px solid var(--line)
+}
 .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
 .brand{font-weight:700;letter-spacing:.2px}
 .nav a{margin-left:18px;opacity:.7}
 .nav a:hover,.nav a.active{opacity:1}
 
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:46px;align-items:center; padding:64px 0 24px}
+/* HERO */
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:46px;align-items:center;padding:64px 0 24px}
 @media (max-width:900px){.hero{grid-template-columns:1fr}}
 .tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.9rem;opacity:.85}
 .h1{font-size:42px;line-height:1.15;margin:14px 0 10px;font-weight:700;letter-spacing:-.02em}
 .sub{color:var(--sub)}
 
-.figure{background:var(--muted);border:1px solid var(--line);border-radius:24px;height:300px;
-  display:flex;align-items:center;justify-content:center;overflow:hidden}
+.figure{
+  background:var(--muted);border:1px solid var(--line);border-radius:24px;height:300px;
+  display:flex;align-items:center;justify-content:center;overflow:hidden
+}
 .figure img{width:100%;height:100%;object-fit:cover}
 
+/* BUTTONS */
 .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:11px 16px;border-radius:12px;border:1px solid var(--line);background:var(--fg);color:#fff;box-shadow:var(--shadow)}
+.btn{
+  padding:11px 16px;border-radius:12px;border:1px solid var(--line);
+  background:var(--fg);color:#fff;box-shadow:var(--shadow)
+}
 .btn.secondary{background:transparent;color:var(--fg)}
 
+/* SECTIONS */
 .section{padding:32px 0}
 .section h2{font-size:22px;margin:0 0 10px}
 .kicker{font-size:.9rem;opacity:.75;margin-bottom:6px}
 
+/* GRID CARDS */
 .grid{display:grid;gap:var(--gap);grid-template-columns:repeat(3,1fr)}
 @media (max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:640px){.grid{grid-template-columns:1fr}}
 
-.card{background:var(--muted);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s ease}
+.card{
+  background:var(--muted);border:1px solid var(--line);border-radius:18px;
+  overflow:hidden;transition:.2s ease
+}
 .card a{display:block;padding:18px}
 .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 
+/* METRICS */
 .metrics{display:grid;gap:var(--gap);grid-template-columns:repeat(3,1fr)}
 .metrics .m{background:var(--muted);border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center}
 .metrics .big{font-size:22px;font-weight:700}
 
+/* FOOTER */
 .footer{padding:40px 0;color:var(--sub);font-size:.9rem;border-top:1px dashed var(--line);margin-top:36px}
 
 /* --- Publications page typography (Apple-like) --- */
 .pub h1{font-size:32px;letter-spacing:-.02em;margin:18px 0}
 .pub-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:18px 0}
 .pub .rule{border:0;border-top:1px solid var(--line);margin:12px 0 24px}
-.pub .subhead{margin:18px 0 8px}
 .pub .pub-list{padding-left:24px;margin:8px 0 12px}
 .pub .pub-bullets{margin:4px 0 8px 20px}
 .pub .pub-list li,.pub .pub-bullets li{margin:6px 0 10px}
 .pub .authors{font-variant-numeric:oldstyle-nums}
 .pub .title{font-weight:600}
 .pub .venue{color:var(--sub)}
-.serif{font-family:ui-serif, "Georgia", "Times New Roman", Times, serif}
-.pub .subhead {
-  margin: 18px 0 8px;
-  font-size: 0.9rem;     /* 🔹 글씨 작게 */
-  font-weight: 500;
-  color: var(--sub);     /* 🔹 회색톤 (기존 보조 텍스트 색상) */
-  letter-spacing: 0.01em;
-}
+.serif{font-family:ui-serif,"Georgia","Times New Roman",Times,serif}
 
+/* ⬇️ Under Review / In Preparation (더 작고 옅게) */
+.pub .subhead{
+  margin:18px 0 8px;
+  font-size:.9rem;
+  font-weight:500;
+  color:#888;
+  letter-spacing:.02em;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif;
+}
