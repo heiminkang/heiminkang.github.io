@@ -63,3 +63,11 @@ a{color:inherit;text-decoration:none}
 .pub .title{font-weight:600}
 .pub .venue{color:var(--sub)}
 .serif{font-family:ui-serif, "Georgia", "Times New Roman", Times, serif}
+.pub .subhead {
+  margin: 18px 0 8px;
+  font-size: 0.9rem;     /* 🔹 글씨 작게 */
+  font-weight: 500;
+  color: var(--sub);     /* 🔹 회색톤 (기존 보조 텍스트 색상) */
+  letter-spacing: 0.01em;
+}
+
