@@ -39,24 +39,17 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255, 255, 255, 0.65);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
 }
-
 .nav-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 0;
 }
-
 .brand { font-weight: 700; letter-spacing: 0.2px; }
-
-.nav a {
-  margin-left: 18px;
-  opacity: 0.7;
-  font-weight: 500;
-}
+.nav a { margin-left: 18px; opacity: 0.7; font-weight: 500; }
 .nav a:hover, .nav a.active { opacity: 1; }
 
-/* --- Hero layout (image left, text right) --- */
+/* --- Hero (profile) --- */
 .hero {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -64,69 +57,32 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   padding: 64px 0 24px;
 }
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; text-align: left; }
-}
-
-/* Profile image */
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
 .avatar {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--muted);
-  box-shadow: var(--shadow);
-  margin: 0 auto;
+  width: 260px; height: 260px; border-radius: 50%;
+  overflow: hidden; border: 1px solid var(--line);
+  background: var(--muted); box-shadow: var(--shadow); margin: 0 auto;
 }
 .avatar img { width: 100%; height: 100%; object-fit: cover; }
-@media (max-width: 900px) {
-  .avatar { width: 180px; height: 180px; margin-bottom: 20px; }
-}
+@media (max-width: 900px) { .avatar { width: 180px; height: 180px; margin-bottom: 20px; } }
 
-/* Hero text */
-.h1 {
-  font-size: 42px;
-  line-height: 1.15;
-  margin: 14px 0 10px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-.lead {
-  font-size: 20px;
-  line-height: 1.45;
-  margin: 8px 0 10px;
-  color: var(--fg);
-  letter-spacing: -0.01em;
-}
+.h1 { font-size: 42px; line-height: 1.15; margin: 14px 0 10px; font-weight: 700; letter-spacing: -0.02em; }
+.lead { font-size: 20px; line-height: 1.45; margin: 8px 0 10px; letter-spacing: -0.01em; }
 .kicker { font-size: 0.9rem; opacity: 0.75; margin-bottom: 6px; }
 .sub { color: var(--sub); font-size: 1rem; line-height: 1.6; }
-
 .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-.tag {
-  display: inline-block;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 6px 12px;
-  font-size: 0.85rem;
-  opacity: 0.9;
-}
+.tag { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 0.85rem; }
 
 /* --- Buttons --- */
 .cta { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
 .btn {
-  padding: 11px 16px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: var(--fg);
-  color: #fff;
-  box-shadow: var(--shadow);
-  transition: 0.2s ease;
+  padding: 11px 16px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--fg); color: #fff; box-shadow: var(--shadow); transition: 0.2s ease;
 }
 .btn:hover { opacity: 0.9; }
 .btn.secondary { background: transparent; color: var(--fg); }
 
-/* --- Section & Grid --- */
+/* --- Sections --- */
 .section { padding: 32px 0; }
 .section h2 { font-size: 22px; margin: 0 0 10px; }
 
@@ -134,85 +90,35 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px)  { .grid { grid-template-columns: 1fr; } }
 
-/* --- Publications & CV Page Typography --- */
-.pub h1 {
-  font-size: 32px;
-  letter-spacing: -0.02em;
-  margin: 18px 0;
-}
-.pub-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin: 18px 0;
-}
-
-/* (전역) 얇은 구분선: CV/Publication/Portfolio 공통 */
-.rule{
-  border: 0;
-  border-top: 1px solid var(--line);
-  margin: 12px 0 24px;
-}
-
-.pub .subhead {
-  margin: 18px 0 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #888;
-  letter-spacing: 0.02em;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
-}
+/* --- Publications / CV --- */
+.pub h1 { font-size: 32px; letter-spacing: -0.02em; margin: 18px 0; }
+.pub-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 18px 0; }
+.rule { border: 0; border-top: 1px solid var(--line); margin: 12px 0 24px; }
+.pub .subhead { margin: 18px 0 8px; font-size: 0.9rem; font-weight: 500; color: #888; letter-spacing: 0.02em; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; }
 .pub .pub-list { padding-left: 24px; margin: 8px 0 12px; }
 .pub .pub-list li { margin: 6px 0 10px; }
 .pub .authors { font-variant-numeric: oldstyle-nums; }
 .pub .title { font-weight: 600; }
 .pub .venue { color: var(--sub); }
-.serif { font-family: ui-serif, "Georgia", "Times New Roman", Times, serif; }
+.serif { font-family: ui-serif, Georgia, "Times New Roman", Times, serif; }
 
 /* --- Footer --- */
 .footer {
   border-top: 1px dashed var(--line);
-  padding-top: 14px;
-  margin: 60px auto 40px;
-  max-width: var(--max);
-  padding-left: 24px;
-  padding-right: 24px;
-  box-sizing: border-box;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--sub);
-  line-height: 1.6;
+  padding-top: 14px; margin: 60px auto 40px; max-width: var(--max);
+  padding-left: 24px; padding-right: 24px; text-align: center;
+  font-size: 0.9rem; color: var(--sub); line-height: 1.6;
 }
-.footer a{
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
-}
+.footer a{ color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
 .footer a:hover{ border-color: var(--line); }
 
-/* --- Home(hero) : image left + text right --- */
-.home .hero{
-  display:grid;
-  grid-template-columns:0.9fr 1.1fr;
-  gap:48px;
-  align-items:center;
-  padding:80px 0;
-}
-.home .avatar{
-  width:320px;height:320px;border-radius:50%;
-  overflow:hidden;border:1px solid var(--line);
-  background:var(--muted);box-shadow:var(--shadow);
-  margin:0 auto;
-}
+/* --- Home(hero) override --- */
+.home .hero{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:48px; align-items:center; padding:80px 0; }
+.home .avatar{ width:320px;height:320px;border-radius:50%; overflow:hidden;border:1px solid var(--line); background:var(--muted);box-shadow:var(--shadow); margin:0 auto; }
 .home .avatar img{ width:100%; height:100%; object-fit:cover; }
-@media (max-width:900px){
-  .home .hero{ grid-template-columns:1fr; }
-  .home .avatar{ width:200px; height:200px; margin-bottom:16px; }
-}
+@media (max-width:900px){ .home .hero{ grid-template-columns:1fr; } .home .avatar{ width:200px; height:200px; margin-bottom:16px; } }
 
-/* ===== Portfolio cards (Apple-style, landscape, full-bleed) ===== */
+/* ===== Portfolio cards (landscape, full-bleed, hover-reveal) ===== */
 .cards-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -220,13 +126,12 @@ a { color: inherit; text-decoration: none; }
   margin:24px 0 8px;
 }
 @media (max-width:1000px){ .cards-grid{grid-template-columns:repeat(2,1fr);} }
-@media (max-width:640px){ .cards-grid{grid-template-columns:1fr;} }
+@media (max-width:640px){ .cards-grid{grid-template-columns:1fr; gap:18px;} }
 
-/* 카드: 가로형 비율 + 풀블리드 이미지 */
 .card{
   position: relative;
   display: block;
-  aspect-ratio: 16/10;             /* portrait → landscape */
+  aspect-ratio: 16/10;                 /* 가로형 비율 */
   border: 1px solid var(--line);
   border-radius: 20px;
   overflow: hidden;
@@ -235,45 +140,52 @@ a { color: inherit; text-decoration: none; }
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
+/* 이미지: 기본은 그대로, hover 시 살짝 확대 */
 .card-media{
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
   transform: scale(1.002);
-  transition: transform .45s ease;
+  transition: transform .5s ease;
 }
+.card-link:hover .card-media{ transform: scale(1.05); }
 
-/* 상단 연도 배지 */
+/* 상단 연도 배지는 항상 보이도록 */
 .badge{
-  position: absolute; left: 12px; top: 12px; z-index: 2;
+  position: absolute; left: 12px; top: 12px; z-index: 3;
   background: rgba(255,255,255,.82);
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 4px 10px;
   font-size: .76rem;
   backdrop-filter: saturate(160%) blur(6px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-/* 하단 내용 오버레이 */
+/* 하단 내용(제목/설명/태그): 기본 숨김, hover로 표시 */
 .card-content{
-  position: absolute; inset: 0; z-index: 2;
+  position: absolute; inset: 0; z-index: 3;
   display: flex; align-items: flex-end;
   padding: 16px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .4s ease, transform .4s ease;
 }
-.card-gradient{
-  position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,.55) 0%,
-    rgba(0,0,0,.30) 28%,
-    rgba(0,0,0,0) 58%
-  );
-}
-.card-text{
-  position: relative; z-index: 2; color: #fff;
-  text-shadow: 0 1px 6px rgba(0,0,0,.28);
+.card-link:hover .card-content{
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* 어두운 오버레이: hover 때만 표시 */
+.card-gradient{
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,.05) 65%);
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.card-link:hover .card-gradient{ opacity: 1; }
+
+.card-text{ color:#fff; text-shadow: 0 1px 6px rgba(0,0,0,.28); }
 .card-title{
   margin: 0 0 4px;
   font-size: 1.12rem;   /* ≈18px */
@@ -299,10 +211,15 @@ a { color: inherit; text-decoration: none; }
   color:#fff; background:rgba(255,255,255,.06);
 }
 
-/* 호버 효과 */
-.card-link:hover .card-media{ transform: scale(1.04); }
+/* 카드 hover 모션 */
 .card-link:hover{
   transform: translateY(-3px);
   border-color: rgba(0,0,0,.10);
   box-shadow: var(--shadow);
+}
+
+/* 터치 디바이스(hover 없음)에서는 항상 텍스트 보이게 */
+@media (hover: none) {
+  .card-content { opacity: 1; transform: none; }
+  .card-gradient { opacity: 1; }
 }
