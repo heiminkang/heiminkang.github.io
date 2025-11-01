@@ -22,70 +22,109 @@
   </div>
 
   <main class="container">
-    <!-- Header (same layout as CV page) -->
+    <!-- Header -->
     <header class="pub-header">
       <h1>Portfolio</h1>
     </header>
     <hr class="rule">
 
-    <!-- Cards Grid -->
-    <section class="cards-grid">
-      <!-- Card 1 -->
-      <a class="card card-link" href="projects-hospitalhero.html" title="Open project">
-        <figure class="card-thumb">
-          <img src="/assets/portfolio/hospitalk.jpg" alt="Hospital Hero app mockup">
-          <span class="badge">2025</span>
-        </figure>
-        <div class="card-body">
-          <h3 class="card-title">Hospital Hero</h3>
-          <p class="card-desc">
-            Enhancing inclusivity for children with auditory or visual impairments.
-          </p>
-          <div class="chips">
-            <span class="chip">Healthcare</span>
-            <span class="chip">UI/UX design</span>
-            <span class="chip">Assistive technology</span>
-          </div>
+    <!-- ================= Apple-style Large Hero Cards (NEW) ================= -->
+    <section class="cards-hero">
+      <!-- Hero 1 -->
+      <a class="hero-card" href="projects-hospitalhero.html" title="Open project">
+        <span class="hero-badge">2025</span>
+        <img src="/assets/portfolio/hospitalk.jpg" alt="Hospital Hero app mockup">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h3 class="hero-title">Hospital Hero</h3>
+          <p class="hero-sub">Inclusivity for children with sensory impairments</p>
         </div>
       </a>
 
-      <!-- Card 2 -->
-      <a class="card card-link" href="#" title="Open project">
-        <figure class="card-thumb">
-          <img src="/assets/portfolio/regulation-map.jpg" alt="E-mental health regulation map visual">
-          <span class="badge">2024–25</span>
-        </figure>
-        <div class="card-body">
-          <h3 class="card-title">E-mental Health Regulation Map</h3>
-          <p class="card-desc">
-            Visual mapping of GDPR, AI Act, and EHDS implications for mental health solutions.
-          </p>
-          <div class="chips">
-            <span class="chip">Policy × Design</span>
-            <span class="chip">Data-enabled</span>
-            <span class="chip">Ethics</span>
-          </div>
+      <!-- Hero 2 -->
+      <a class="hero-card" href="#" title="Open project">
+        <span class="hero-badge">2024–25</span>
+        <img src="/assets/portfolio/regulation-map.jpg" alt="E-mental health regulation map visual">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h3 class="hero-title">E-mental Health Regulation Map</h3>
+          <p class="hero-sub">GDPR · AI Act · EHDS visual mapping</p>
         </div>
       </a>
 
-      <!-- Card 3 -->
-      <a class="card card-link" href="#" title="Open project">
-        <figure class="card-thumb">
-          <img src="/assets/portfolio/sentiment-journey.jpg" alt="Sentiment-integrated patient journey visual">
-          <span class="badge">2025</span>
-        </figure>
-        <div class="card-body">
-          <h3 class="card-title">Sentiment-Integrated Patient Journey</h3>
-          <p class="card-desc">
-            Combining forum narratives, topic–sentiment analysis, and time-value mapping into a decision aid.
-          </p>
-          <div class="chips">
-            <span class="chip">AI for insights</span>
-            <span class="chip">Visualization</span>
-            <span class="chip">Participatory</span>
-          </div>
+      <!-- Hero 3 -->
+      <a class="hero-card" href="#" title="Open project">
+        <span class="hero-badge">2025</span>
+        <img src="/assets/portfolio/sentiment-journey.jpg" alt="Sentiment-integrated patient journey visual">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h3 class="hero-title">Sentiment-Integrated Patient Journey</h3>
+          <p class="hero-sub">Forum narratives × topic–sentiment × time-value</p>
         </div>
       </a>
+    </section>
+    <!-- ===================================================================== -->
+
+    <!-- (Optional) 아래 보조 그리드 섹션 -->
+    <section class="section section--below">
+      <div class="cards-grid">
+        <!-- Card 1 -->
+        <a class="card card-link" href="projects-hospitalhero.html" title="Open project">
+          <figure class="card-thumb">
+            <img src="/assets/portfolio/hospitalk.jpg" alt="Hospital Hero app mockup">
+            <span class="badge">2025</span>
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Hospital Hero</h3>
+            <p class="card-desc">
+              Enhancing inclusivity for children with auditory or visual impairments.
+            </p>
+            <div class="chips">
+              <span class="chip">Healthcare</span>
+              <span class="chip">UI/UX design</span>
+              <span class="chip">Assistive technology</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a class="card card-link" href="#" title="Open project">
+          <figure class="card-thumb">
+            <img src="/assets/portfolio/regulation-map.jpg" alt="E-mental health regulation map visual">
+            <span class="badge">2024–25</span>
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">E-mental Health Regulation Map</h3>
+            <p class="card-desc">
+              Visual mapping of GDPR, AI Act, and EHDS implications for mental health solutions.
+            </p>
+            <div class="chips">
+              <span class="chip">Policy × Design</span>
+              <span class="chip">Data-enabled</span>
+              <span class="chip">Ethics</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a class="card card-link" href="#" title="Open project">
+          <figure class="card-thumb">
+            <img src="/assets/portfolio/sentiment-journey.jpg" alt="Sentiment-integrated patient journey visual">
+            <span class="badge">2025</span>
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Sentiment-Integrated Patient Journey</h3>
+            <p class="card-desc">
+              Combining forum narratives, topic–sentiment analysis, and time-value mapping into a decision aid.
+            </p>
+            <div class="chips">
+              <span class="chip">AI for insights</span>
+              <span class="chip">Visualization</span>
+              <span class="chip">Participatory</span>
+            </div>
+          </div>
+        </a>
+      </div>
     </section>
 
     <!-- Footer -->
