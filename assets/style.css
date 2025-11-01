@@ -130,7 +130,7 @@ a{ color:inherit; text-decoration:none; }
   margin:0 0 14px; color:#111;
 }
 .section-body{
-  max-width:60ch; font-size:17px; line-height:1.75;
+  max-width:100%; font-size:16px; line-height:1.75;
   color:#333; margin:0 0 18px;
 }
 .section-figure{ margin:18px 0 6px; }
