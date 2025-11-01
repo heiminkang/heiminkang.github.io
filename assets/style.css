@@ -268,3 +268,22 @@ a { color: inherit; text-decoration: none; }
   border-color: rgba(0,0,0,.10);
   box-shadow: var(--shadow);
 }
+
+/* ===== Apple-style Large Hero Cards (horizontal) ===== */
+.cards-hero{display:flex;gap:24px;overflow-x:auto;padding:6px 2px 14px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}
+.cards-hero::-webkit-scrollbar{display:none;}
+.hero-card{position:relative;flex:0 0 85%;max-width:860px;aspect-ratio:16/10;
+  border-radius:32px;overflow:hidden;background:var(--muted);border:1px solid var(--line);
+  box-shadow:var(--shadow);scroll-snap-align:center;transition:transform .2s ease, box-shadow .2s ease;}
+@media (min-width:960px){.hero-card{flex-basis:720px;}}
+.hero-card img{width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform .6s ease;display:block;}
+.hero-card:hover img{transform:scale(1.05);}
+.hero-badge{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.85);
+  border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.8rem;
+  backdrop-filter:saturate(160%) blur(8px);z-index:2;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0) 40%);}
+.hero-content{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.3);}
+.hero-title{margin:0 0 4px;font-size:1.6rem;font-weight:700;letter-spacing:-.01em;}
+.hero-sub{margin:0;opacity:.9;}
+.section--below{margin-top:18px;}
