@@ -6,29 +6,6 @@
   <title>Transforming the Mental Health Referral System through AI — Heimin Kang</title>
   <meta name="description" content="Strategic & tactical roadmaps for AI integration in the mental health referral system." />
   <link rel="stylesheet" href="assets/style.css" />
-  <style>
-    /* --- minimal add-ons (you can move to style.css) --- */
-    .hero{padding:56px 0 24px}
-    .title{font-size:clamp(28px,3vw,40px);line-height:1.2;margin:0 0 8px}
-    .meta{color:#666;font-size:14px;margin-bottom:18px}
-    .intro{font-size:18px;line-height:1.7;margin:0}
-    .rule{height:1px;border:none;background:rgba(0,0,0,.08);margin:28px 0}
-    .section{padding:20px 0}
-    .section h2{font-size:20px;margin:0 0 8px}
-    .section p{margin:0 0 16px;line-height:1.75}
-    .fit{width:100%;height:auto;border-radius:10px}
-    .caption{font-size:13px;color:#777;margin-top:6px}
-    .explore{background:#072f57;color:#fff;margin-top:40px;padding:20px 0 10px;border-radius:14px}
-    .explore h3{font-size:20px;margin:0 16px 10px}
-    .explore-grid{display:grid;grid-template-columns:repeat(5,minmax(140px,1fr));gap:10px;margin:0 16px 12px}
-    .explore a{display:block;border-radius:10px;overflow:hidden}
-    .explore img{width:100%;height:120px;object-fit:cover;display:block}
-    .back{display:inline-block;margin:18px 0 0;color:#111;text-decoration:none}
-    @media (max-width:800px){
-      .explore-grid{grid-template-columns:repeat(3,1fr)}
-      .explore img{height:100px}
-    }
-  </style>
 </head>
 <body>
 
@@ -46,14 +23,10 @@
 
   <main class="container">
 
-    <!-- 1. 제목 -->
-    <section class="hero">
+    <!-- HERO (화면 절반 폭, 좌측 정렬) -->
+    <section class="hero project-hero">
       <h1 class="title">Transforming the Mental Health Referral System through AI</h1>
-
-      <!-- 2. 기간 + 기관 -->
       <div class="meta">03.2025 – 08.2025 · @TU Delft · Master Thesis</div>
-
-      <!-- 3. 인트로 -->
       <p class="intro">
         To address mental health referral system challenges, including healthcare professionals' workload burden
         and waiting delays in the system, I developed a future strategy (strategic roadmap & tactical roadmap)
@@ -63,94 +36,133 @@
 
     <hr class="rule" />
 
-    <!-- 4~6. Background -->
+    <!-- Background -->
     <section class="section" id="background">
       <h2>Background</h2>
-      <!-- 5. 설명글 -->
       <p>
         The Dutch mental healthcare system faces prolonged waiting lists and fragmented handovers between GPs and GGZ.
         Through literature review and stakeholder conversations, I mapped systemic bottlenecks (information loss,
         eligibility ambiguity, and delayed feedback). These informed principles for responsible AI adoption across
         referral touchpoints.
       </p>
-      <!-- 6. 이미지 -->
       <img class="fit" src="assets/projects/referral-roadmap/01-background.webp" alt="System context and bottlenecks" />
       <div class="caption">System context map highlighting bottlenecks across GP–GGZ referral.</div>
     </section>
 
-    <!-- 7~9. Process / methods -->
+    <!-- Process / Methods -->
     <section class="section" id="process">
       <h2>Process / Methods</h2>
-      <!-- 8. 설명글 -->
       <p>
         Mixed-methods design research combined desk research, expert interviews, journey/system mapping,
         and co-creation sessions. Insights were synthesized into a system-level framework and validated via
         critique sessions with mental healthcare supporters.
       </p>
-      <!-- 9. 이미지 -->
       <img class="fit" src="assets/projects/referral-roadmap/02-process.webp" alt="Research process and frameworks" />
       <div class="caption">Methods and synthesis: interviews, mapping, and framework consolidation.</div>
     </section>
 
-    <!-- 10~12. Outcome -->
+    <!-- Outcome -->
     <section class="section" id="outcome">
       <h2>Outcome</h2>
-      <!-- 11. 설명글 -->
       <p>
         The final deliverable is a two-layer roadmap: (1) a <b>strategic roadmap</b> outlining horizon shifts
         (H1–H3) for the referral ecosystem, and (2) a <b>tactical roadmap</b> detailing AI-supported actions
         (triage assistance, interoperable handovers, and monitoring feedback loops). The roadmaps align with
-        EU regulation themes (transparency, privacy, safety & efficacy, interoperability, risk management,
+        EU regulation themes (transparency, privacy, safety &amp; efficacy, interoperability, risk management,
         and user rights).
       </p>
-      <!-- 12. 이미지 -->
       <img class="fit" src="assets/projects/referral-roadmap/03-outcome.webp" alt="Strategic and tactical roadmaps" />
       <div class="caption">Strategic (H1–H3) and tactical roadmaps for AI-supported referrals.</div>
     </section>
 
-    <!-- 13. Explore my other projects -->
-    <section class="explore-apple">
-  <h3>Explore my other projects</h3>
-  <div class="explore-cards">
-    <a class="explore-card" href="projects-hospitalk.html" title="HospiTALK">
-      <img src="assets/projects/hospitalk/hospitalk.cover.jpg" alt="HospiTALK" />
-      <div class="overlay"></div>
-      <div class="label">HospiTALK</div>
-      <!-- chips (원하면 사용)
-      <div class="chips">
-        <span class="chip">Workflow</span>
-        <span class="chip">Communication</span>
-      </div> -->
-    </a>
+    <!-- Explore my other projects (가로 스크롤 캐러셀) -->
+    <section class="explore-rail" aria-label="Explore my other projects">
+      <h3>Explore my other projects</h3>
 
-    <a class="explore-card" href="projects-eu-regulation-mapping.html" title="EU Regulation Mapping">
-      <img src="assets/projects/eu-regulation-mapping/thumb.webp" alt="EU Regulation Mapping" />
-      <div class="overlay"></div>
-      <div class="label">EU Regulation Mapping</div>
-    </a>
+      <!-- 좌/우 버튼 -->
+      <button class="explore-nav explore-prev" aria-label="Scroll left">‹</button>
+      <button class="explore-nav explore-next" aria-label="Scroll right">›</button>
 
-    <a class="explore-card" href="projects-hospitalhero.html" title="Hospital Hero">
-      <img src="assets/projects/hospitalhero/thumb.webp" alt="Hospital Hero" />
-      <div class="overlay"></div>
-      <div class="label">Hospital Hero</div>
-    </a>
+      <!-- 스크롤 트랙 -->
+      <div class="explore-track" id="exploreTrack">
+        <!-- 현재 페이지 외 7개 카드 넣기 -->
+        <a class="explore-card" href="projects-regulationmapping.html" title="Regulation Mapping">
+          <img src="assets/projects/regulationmapping/regulationmapping.cover.jpg" alt="Regulation Mapping" />
+          <div class="overlay"></div><div class="label">Regulation Mapping</div>
+        </a>
 
-    <a class="explore-card" href="projects-corney.html" title="Corney">
-      <img src="assets/projects/corney/thumb.webp" alt="Corney" />
-      <div class="overlay"></div>
-      <div class="label">Corney</div>
-    </a>
+        <a class="explore-card" href="projects-hospitalhero.html" title="Hospital Hero">
+          <img src="assets/projects/hospitalhero/hospitalhero.cover.jpg" alt="Hospital Hero" />
+          <div class="overlay"></div><div class="label">Hospital Hero</div>
+        </a>
 
-    <a class="explore-card" href="projects-eatprint.html" title="EATPRINT">
-      <img src="assets/projects/eatprint/thumb.webp" alt="EATPRINT" />
-      <div class="overlay"></div>
-      <div class="label">EATPRINT</div>
-    </a>
-  </div>
-</section>
+        <a class="explore-card" href="projects-hospitalk.html" title="HospiTALK">
+          <img src="assets/projects/hospitalk/hospitalk.cover.jpg" alt="HospiTALK" />
+          <div class="overlay"></div><div class="label">HospiTALK</div>
+        </a>
 
+        <a class="explore-card" href="projects-tutum.html" title="Tutum">
+          <img src="assets/projects/tutum/tutum.cover.jpg" alt="Tutum" />
+          <div class="overlay"></div><div class="label">Tutum</div>
+        </a>
+
+        <a class="explore-card" href="projects-corney.html" title="Corney">
+          <img src="assets/projects/corney/corney.cover.jpg" alt="Corney" />
+          <div class="overlay"></div><div class="label">Corney</div>
+        </a>
+
+        <!-- 필요 시 더 추가 -->
+        <a class="explore-card" href="projects-soundcushion.html" title="Sound Cushion">
+          <img src="assets/projects/soundcushion/soundcushion.cover.jpg" alt="Sound Cushion" />
+          <div class="overlay"></div><div class="label">Sound Cushion</div>
+        </a>
+
+        <a class="explore-card" href="projects-eatprint.html" title="EATPRINT">
+          <img src="assets/projects/eatprint/eatprint.cover.jpg" alt="EATPRINT" />
+          <div class="overlay"></div><div class="label">EATPRINT</div>
+        </a>
+      </div>
+    </section>
 
     <p><a class="back" href="projects.html">← Back to Projects</a></p>
   </main>
+
+  <!-- Explore 캐러셀 스크립트 -->
+  <script>
+    (function () {
+      const track = document.getElementById('exploreTrack');
+      const prev  = document.querySelector('.explore-prev');
+      const next  = document.querySelector('.explore-next');
+
+      function cardWidth() {
+        const card = track.querySelector('.explore-card');
+        if (!card) return 300;
+        const styles = getComputedStyle(card);
+        return card.getBoundingClientRect().width + parseFloat(styles.marginRight || 16);
+      }
+
+      prev.addEventListener('click', () => track.scrollBy({ left: -cardWidth() * 1.2, behavior: 'smooth' }));
+      next.addEventListener('click', () => track.scrollBy({ left:  cardWidth() * 1.2, behavior: 'smooth' }));
+
+      // 드래그 스크롤
+      let isDown = false, startX = 0, startLeft = 0;
+      track.addEventListener('mousedown', e => { isDown = true; startX = e.pageX; startLeft = track.scrollLeft; });
+      window.addEventListener('mouseup',   () => { isDown = false; });
+      track.addEventListener('mouseleave', () => { isDown = false; });
+      track.addEventListener('mousemove',  e => {
+        if (!isDown) return;
+        e.preventDefault();
+        track.scrollLeft = startLeft - (e.pageX - startX);
+      });
+
+      // 수직 휠을 가로 스크롤로
+      track.addEventListener('wheel', e => {
+        if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
+          track.scrollLeft += e.deltaY;
+          e.preventDefault();
+        }
+      }, { passive: false });
+    })();
+  </script>
 </body>
 </html>
