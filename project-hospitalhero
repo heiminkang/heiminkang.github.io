@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/style.css" />
+  <title>Hospital Hero — Inclusive, Haptic-supported Journey | Heimin Kang</title>
+  <meta name="description" content="Making the Hospital Hero app more inclusive for children with visual or auditory impairments through tactile interaction and inclusive UI." />
+</head>
+<body>
+  <!-- Nav (same as other pages) -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><a href="/">Heimin Kang</a></div>
+      <div>
+        <a href="/cv.html">CV</a>
+        <a href="/publications.html">Publications</a>
+        <a href="/portfolio.html">Portfolio</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container pub">
+    <!-- Page header -->
+    <header class="pub-header">
+      <h1>Hospital Hero — Inclusive, Haptic-supported Journey</h1>
+      <a class="btn secondary" href="/assets/projects/hospital-hero/report.pdf" target="_blank" rel="noopener">View Full Report (PDF)</a>
+    </header>
+    <hr class="rule">
+
+    <!-- Intro / Overview -->
+    <section class="section">
+      <p class="lead">
+        We enhanced the <em>Hospital Hero</em> app so children with visual or auditory impairments can prepare for hospital visits with confidence—by layering <strong>tactile interaction</strong> and an <strong>inclusive UI</strong> across the whole journey. :contentReference[oaicite:0]{index=0}
+      </p>
+
+      <div class="keywords" style="margin-top:14px">
+        <span class="tag">Pediatric eHealth</span>
+        <span class="tag">Inclusive design</span>
+        <span class="tag">Haptics</span>
+        <span class="tag">System & journey thinking</span>
+      </div>
+
+      <ul style="margin-top:14px; color:var(--sub)">
+        <li><strong>My role:</strong> Research & concept lead (strategy, mapping, concept system, writing)</li>
+        <li><strong>Team:</strong> Heimin Kang, Joost Spaanderman</li>
+        <li><strong>Course:</strong> eHealth Design 2025</li>
+      </ul>
+    </section>
+
+    <!-- Background -->
+    <section class="section">
+      <h2>Background</h2>
+      <p>
+        Hospital Hero helps children and parents reduce anxiety around hospital procedures using preparation, storytelling, and light gamification; it is used in multiple Dutch hospitals. However, the current experience is not sufficiently inclusive for children with sensory impairments. :contentReference[oaicite:1]{index=1}
+      </p>
+      <p>
+        Literature and prevalence data underline why accessibility matters: children with sensory impairments often experience higher fear and anxiety in clinical contexts, which can negatively affect cooperation and outcomes. :contentReference[oaicite:2]{index=2}
+      </p>
+
+      <h3 class="subhead">Design Goal</h3>
+      <p>
+        <strong>Make Hospital Hero inclusive and engaging without stigma</strong>—empowering children with a sense of control, reducing uncertainty, and supporting the whole care journey for families and staff. :contentReference[oaicite:3]{index=3}
+      </p>
+    </section>
+
+    <!-- Process -->
+    <section class="section">
+      <h2>Process</h2>
+
+      <h3 class="subhead">System & Stakeholder Understanding</h3>
+      <p>
+        We mapped stakeholders (children, parents, clinicians, administrators) and positioned Hospital Hero within micro/meso/macro layers to clarify value and integration points. :contentReference[oaicite:4]{index=4}
+      </p>
+
+      <h3 class="subhead">Research Synthesis → Requirements</h3>
+      <ul>
+        <li>Foster <strong>control</strong> and reduce uncertainty for children. :contentReference[oaicite:5]{index=5}</li>
+        <li>Deliver <strong>stigma-free accessibility</strong> (beneficial to all, not “special mode”). :contentReference[oaicite:6]{index=6}</li>
+        <li>Keep it <strong>engaging</strong> for both impaired and non-impaired children. :contentReference[oaicite:7]{index=7}</li>
+        <li>Integrate improvements across the <strong>whole journey</strong> (before–during–after). :contentReference[oaicite:8]{index=8}</li>
+      </ul>
+
+      <h3 class="subhead">Ideation & Expert Input</h3>
+      <p>
+        Using HMW ideation and a 2×2 (Inclusivity × Engagement), we selected a primary concept—<em>Tactile Interaction in the Hospital Journey</em>—with a supporting sub-concept for <em>Inclusive UI</em>. We iterated with experts (e.g., Visio; haptics maker Tellmies) to refine feasibility, content timing, and interaction fidelity. :contentReference[oaicite:9]{index=9}
+      </p>
+
+      <h3 class="subhead">Inclusive UI Guidelines (Highlights)</h3>
+      <ul>
+        <li>High contrast visuals, bolder outlines; enlarge tap targets and icons.</li>
+        <li>Consistent voice-over / read-aloud; optional text zoom; tablet-friendly layout.</li>
+        <li>QR codes with contrast borders; reduce background distraction on focus. :contentReference[oaicite:10]{index=10}</li>
+      </ul>
+    </section>
+
+    <!-- Outcome -->
+    <section class="section">
+      <h2>Outcome</h2>
+      <p>
+        We deliver a cohesive concept that embeds tactile interaction and inclusive UI across three phases:
+      </p>
+
+      <h3 class="subhead">Before the visit</h3>
+      <ul>
+        <li><strong>Haptic storytelling</strong>: vibrations match narrative events (e.g., heartbeat pulse), easing unfamiliarity while learning. :contentReference[oaicite:11]{index=11}</li>
+      </ul>
+
+      <h3 class="subhead">During the visit</h3>
+      <ul>
+        <li><strong>Haptic animal search</strong>: BLE/NFC floor stickers guide children like a “warmer/colder” game (stronger pulses nearer the target). :contentReference[oaicite:12]{index=12}</li>
+        <li><strong>Calm with animal</strong>: brief breathing + vibration routine to regulate anxiety between steps. :contentReference[oaicite:13]{index=13}</li>
+        <li><strong>Multi-sensory exploration</strong>: tactile patches linked to app content (materials, device sounds). :contentReference[oaicite:14]{index=14}</li>
+      </ul>
+
+      <h3 class="subhead">After the visit</h3>
+      <ul>
+        <li><strong>Haptic reward</strong>: a celebratory vibration pattern reinforces accomplishment and confidence. :contentReference[oaicite:15]{index=15}</li>
+        <li><strong>Haptic notification</strong>: gentle cues help children move to the next step with a sense of control. :contentReference[oaicite:16]{index=16}</li>
+      </ul>
+
+      <h3 class="subhead">Impact</h3>
+      <ul>
+        <li><strong>Micro</strong>: more accessible, engaging preparation; better emotional comfort for children and families. :contentReference[oaicite:17]{index=17}</li>
+        <li><strong>Meso</strong>: smoother procedures and reduced burden for staff. :contentReference[oaicite:18]{index=18}</li>
+        <li><strong>Macro</strong>: healthier perceptions of hospitals; improved health motivation & literacy. :contentReference[oaicite:19]{index=19}</li>
+      </ul>
+
+      <h3 class="subhead">Next</h3>
+      <p>
+        Prototype & validation with children (with/without impairments), co-design with haptics experts and pediatric psychologists, then phased rollout starting from inclusive UI baseline. :contentReference[oaicite:20]{index=20}
+      </p>
+    </section>
+
+    <!-- Optional gallery (drop images later) -->
+    <section class="section">
+      <h2>Gallery</h2>
+      <div class="grid">
+        <figure class="card"><a><img alt="Haptic storytelling sketch" src="/assets/projects/hospital-hero/gallery/story-haptics.jpg"></a></figure>
+        <figure class="card"><a><img alt="BLE/NFC floor sticker concept" src="/assets/projects/hospital-hero/gallery/floor-stickers.jpg"></a></figure>
+        <figure class="card"><a><img alt="Inclusive UI examples" src="/assets/projects/hospital-hero/gallery/inclusive-ui.jpg"></a></figure>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <footer class="footer">
+      <p>© Heimin Kang · <a href="mailto:heimin.kang@gmail.com">heimin.kang@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/heiminkang/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
