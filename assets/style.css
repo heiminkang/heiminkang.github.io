@@ -12,9 +12,7 @@
   --gap: 30px;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html, body {
   margin: 0;
@@ -24,10 +22,7 @@ html, body {
   font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Inter, Arial, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
 
 .container {
   max-width: var(--max);
@@ -42,7 +37,7 @@ a {
   z-index: 20;
   backdrop-filter: saturate(180%) blur(14px);
   background: rgba(255, 255, 255, 0.65);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03); /* 그림자 제거 */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03); /* 부드러운 하단 그림자 */
 }
 
 .nav-inner {
@@ -52,21 +47,14 @@ a {
   padding: 12px 0;
 }
 
-.brand {
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
+.brand { font-weight: 700; letter-spacing: 0.2px; }
 
 .nav a {
   margin-left: 18px;
   opacity: 0.7;
   font-weight: 500;
 }
-
-.nav a:hover,
-.nav a.active {
-  opacity: 1;
-}
+.nav a:hover, .nav a.active { opacity: 1; }
 
 /* --- Hero layout (image left, text right) --- */
 .hero {
@@ -76,12 +64,8 @@ a {
   align-items: center;
   padding: 64px 0 24px;
 }
-
 @media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
+  .hero { grid-template-columns: 1fr; text-align: left; }
 }
 
 /* Profile image */
@@ -95,19 +79,9 @@ a {
   box-shadow: var(--shadow);
   margin: 0 auto;
 }
-
-.avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 900px) {
-  .avatar {
-    width: 180px;
-    height: 180px;
-    margin-bottom: 20px;
-  }
+  .avatar { width: 180px; height: 180px; margin-bottom: 20px; }
 }
 
 /* Hero text */
@@ -118,7 +92,6 @@ a {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
-
 .lead {
   font-size: 20px;
   line-height: 1.45;
@@ -126,26 +99,10 @@ a {
   color: var(--fg);
   letter-spacing: -0.01em;
 }
+.kicker { font-size: 0.9rem; opacity: 0.75; margin-bottom: 6px; }
+.sub { color: var(--sub); font-size: 1rem; line-height: 1.6; }
 
-.kicker {
-  font-size: 0.9rem;
-  opacity: 0.75;
-  margin-bottom: 6px;
-}
-
-.sub {
-  color: var(--sub);
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.keywords {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
-}
-
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .tag {
   display: inline-block;
   border: 1px solid var(--line);
@@ -156,13 +113,7 @@ a {
 }
 
 /* --- Buttons --- */
-.cta {
-  margin-top: 18px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
+.cta { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
 .btn {
   padding: 11px 16px;
   border-radius: 12px;
@@ -172,43 +123,16 @@ a {
   box-shadow: var(--shadow);
   transition: 0.2s ease;
 }
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-.btn.secondary {
-  background: transparent;
-  color: var(--fg);
-}
+.btn:hover { opacity: 0.9; }
+.btn.secondary { background: transparent; color: var(--fg); }
 
 /* --- Section & Grid --- */
-.section {
-  padding: 32px 0;
-}
+.section { padding: 32px 0; }
+.section h2 { font-size: 22px; margin: 0 0 10px; }
 
-.section h2 {
-  font-size: 22px;
-  margin: 0 0 10px;
-}
-
-.grid {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: repeat(3, 1fr);
-}
-
-@media (max-width: 1000px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
+.grid { display: grid; gap: var(--gap); grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1000px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .grid { grid-template-columns: 1fr; } }
 
 /* --- Publications & CV Page Typography --- */
 .pub h1 {
@@ -216,7 +140,6 @@ a {
   letter-spacing: -0.02em;
   margin: 18px 0;
 }
-
 .pub-header {
   display: flex;
   align-items: center;
@@ -225,7 +148,8 @@ a {
   margin: 18px 0;
 }
 
-.pub .rule {
+/* (전역) 얇은 구분선: CV/Publication/Portfolio 공통 */
+.rule{
   border: 0;
   border-top: 1px solid var(--line);
   margin: 12px 0 24px;
@@ -239,98 +163,56 @@ a {
   letter-spacing: 0.02em;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
 }
-
-.pub .pub-list {
-  padding-left: 24px;
-  margin: 8px 0 12px;
-}
-
-.pub .pub-list li {
-  margin: 6px 0 10px;
-}
-
-.pub .authors {
-  font-variant-numeric: oldstyle-nums;
-}
-
-.pub .title {
-  font-weight: 600;
-}
-
-.pub .venue {
-  color: var(--sub);
-}
-
-.serif {
-  font-family: ui-serif, "Georgia", "Times New Roman", Times, serif;
-}
+.pub .pub-list { padding-left: 24px; margin: 8px 0 12px; }
+.pub .pub-list li { margin: 6px 0 10px; }
+.pub .authors { font-variant-numeric: oldstyle-nums; }
+.pub .title { font-weight: 600; }
+.pub .venue { color: var(--sub); }
+.serif { font-family: ui-serif, "Georgia", "Times New Roman", Times, serif; }
 
 /* --- Footer --- */
 .footer {
   border-top: 1px dashed var(--line);
-  padding-top: 14px; /* 줄과 텍스트 간격 */
+  padding-top: 14px;               /* 줄과 텍스트 간격 */
   margin: 60px auto 40px;
   max-width: var(--max);
-  padding-left: 24px;                   /* 컨테이너와 동일 좌우 여백 */
-  padding-right: 24px; 
-  box-sizing: border-box;               /* 패딩 포함 너비 계산 */
-  text-align: center;   
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+  text-align: center;              /* 중앙 정렬 */
   font-size: 0.9rem;
   color: var(--sub);
-  line-height: 1.6; /* 줄간격 살짝 여유 */
+  line-height: 1.6;
 }
-
-.footer a {
+.footer a{
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
-
-.footer a:hover {
-  border-color: var(--line);
-}
+.footer a:hover{ border-color: var(--line); }
 
 /* --- Home(hero) : image left + text right --- */
-.home .hero {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 48px;
-  align-items: center;
-  padding: 80px 0;
+.home .hero{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:48px;
+  align-items:center;
+  padding:80px 0;
 }
-
-.home .avatar {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--muted);
-  box-shadow: var(--shadow);
-  margin: 0 auto;
+.home .avatar{
+  width:320px;height:320px;border-radius:50%;
+  overflow:hidden;border:1px solid var(--line);
+  background:var(--muted);box-shadow:var(--shadow);
+  margin:0 auto;
 }
-
-.home .avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 900px) {
-  .home .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .home .avatar {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 16px;
-  }
+.home .avatar img{ width:100%; height:100%; object-fit:cover; }
+@media (max-width:900px){
+  .home .hero{ grid-template-columns:1fr; }
+  .home .avatar{ width:200px; height:200px; margin-bottom:16px; }
 }
 
 /* ===== Portfolio cards (Apple-style) ===== */
-
 .cards-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -380,7 +262,6 @@ a {
   display:inline-block; border:1px solid var(--line); border-radius:999px;
   padding:5px 10px; font-size:.8rem; color:var(--fg); background:var(--muted);
 }
-
 .card-link:hover .card-thumb img{ transform:scale(1.04); }
 .card-link:hover{
   transform: translateY(-3px);
