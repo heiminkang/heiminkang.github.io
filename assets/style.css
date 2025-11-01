@@ -217,3 +217,79 @@ a { color: inherit; text-decoration: none; }
   .card-content { opacity: 1; transform: none; }
   .card-gradient { opacity: 1; }
 }
+
+/* ===== Project detail: 1/2-width header layout ===== */
+.hero .title,
+.hero .meta,
+.hero .intro {
+  max-width: 50%;
+  text-align: left;
+}
+
+/* spacing */
+.hero .meta { margin: 6px 0 14px; color:#666; font-size:14px; }
+.hero .intro { font-size:18px; line-height:1.75; margin:0; }
+
+/* mobile: full width */
+@media (max-width: 900px){
+  .hero .title,
+  .hero .meta,
+  .hero .intro { max-width: 100%; }
+}
+
+/* ===== Explore (Apple-style cards) ===== */
+.explore-apple { margin-top: 48px; }
+.explore-apple h3 { font-size:20px; margin:0 0 14px; }
+
+.explore-cards {
+  display:grid;
+  grid-template-columns: repeat(5, minmax(180px,1fr));
+  gap:16px;
+}
+
+.explore-card {
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  background:#f6f7f8;
+  box-shadow:0 8px 30px rgba(0,0,0,.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-4px);
+  box-shadow:0 12px 40px rgba(0,0,0,.08);
+}
+
+.explore-card img {
+  display:block;
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.explore-card .overlay {
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.35) 100%);
+}
+
+.explore-card .label {
+  position:absolute; left:12px; bottom:12px;
+  color:#fff; font-weight:600; font-size:14px;
+}
+
+/* chips row (optional) */
+.explore-card .chips {
+  position:absolute; left:12px; bottom:40px;
+  display:flex; gap:8px; flex-wrap:wrap;
+}
+.explore-card .chip {
+  font-size:12px; padding:4px 8px; border-radius:999px;
+  background:rgba(255,255,255,.18); backdrop-filter: blur(4px);
+  color:#fff;
+}
+
+/* responsive columns */
+@media (max-width: 1100px){ .explore-cards { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 640px){ .explore-cards { grid-template-columns: repeat(2,1fr); } }
