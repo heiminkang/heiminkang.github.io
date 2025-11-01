@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/style.css" />
+  <title>HospiTALK — Heimin Kang</title>
+  <meta name="description" content="Flexible scheduling platform for clinical staff — HospiTALK project by Heimin Kang" />
+</head>
+<body>
+  <!-- Nav -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><a href="/">Heimin Kang</a></div>
+      <div>
+        <a href="/cv.html">CV</a>
+        <a href="/publications.html">Publications</a>
+        <a href="/portfolio.html" class="active">Portfolio</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container pub">
+    <header class="pub-header">
+      <h1>HospiTALK</h1>
+    </header>
+    <hr class="rule">
+
+    <img src="/assets/portfolio/hospitalk.jpg" alt="HospiTALK project mockup" style="width:100%; border-radius:16px; margin:20px 0;">
+
+    <p class="serif">
+      HospiTALK is a flexible scheduling platform co-developed with Amsterdam UMC to improve autonomy, transparency, 
+      and coordination in clinical department staff scheduling.
+    </p>
+
+    <h2>Background</h2>
+    <p>
+      Nurses often experience inflexible shift structures and limited visibility into scheduling decisions.
+      This project reimagined the daily planning process to give staff more control while maintaining 
+      operational efficiency.
+    </p>
+
+    <h2>Approach</h2>
+    <p>
+      Through shadowing sessions, co-design workshops, and workflow mapping, 
+      we identified systemic barriers and prototyped a digital tool integrating both personal preferences 
+      and task needs.
+    </p>
+
+    <img src="/assets/portfolio/hospitalk-workflow.jpg" alt="Workflow mapping" style="width:100%; border-radius:12px; margin:16px 0;">
+
+    <h2>Outcome</h2>
+    <p>
+      The resulting platform prototype allows staff to negotiate shifts collaboratively 
+      and visualize task distributions, aligning organizational needs with individual autonomy.
+    </p>
+
+    <hr class="rule">
+
+    <footer class="footer">
+      <p>© Heimin Kang · <a href="mailto:heimin.kang@gmail.com">heimin.kang@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/heiminkang/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
