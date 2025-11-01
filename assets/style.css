@@ -43,7 +43,7 @@ a{ color:inherit; text-decoration:none; }
 .btn:hover{ opacity:.9; }
 .btn.secondary{ background:transparent; color:var(--fg); }
 
-/* --- Sections --- */
+/* --- Sections (legacy) --- */
 .section{ padding:32px 0; }
 .section h2{ font-size:22px; margin:0 0 10px; }
 
@@ -103,31 +103,52 @@ a{ color:inherit; text-decoration:none; }
 .card-link:hover{ transform:translateY(-3px); border-color:rgba(0,0,0,.10); box-shadow:var(--shadow); }
 @media (hover:none){ .card-content{ opacity:1; transform:none;} .card-gradient{ opacity:1; } }
 
-/* ===== Project detail: half-width header (use class="hero project-hero") ===== */
+/* ===== Project detail: half-width hero (left aligned) ===== */
 .project-hero{
   display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start;
-  max-width:50vw;           /* 화면의 절반 */
-  padding-left:0vw;         /* 좌측 여백 (원하면 0으로) */
+  max-width:60ch;          /* 읽기 좋은 문장 폭 기준 */
+  padding-left:0;          /* 컨테이너와 같은 좌측라인 */
   padding-top:6vh;
 }
-.project-hero .title{ font-size:clamp(28px,3vw,42px); line-height:1.2; margin:0 0 10px 0; text-align:left; }
-.project-hero .meta{ font-size:15px; color:#555; margin-bottom:20px; text-align:left; }
-.project-hero .intro{ font-size:18px; line-height:1.75; margin:0; text-align:left; color:#222; }
+.project-hero .title{ font-size:clamp(28px,3vw,42px); line-height:1.2; margin:0 0 10px; }
+.project-hero .meta{ font-size:15px; color:#555; margin-bottom:20px; }
+.project-hero .intro{ font-size:18px; line-height:1.75; margin:0; color:#222; }
 @media (max-width:900px){
-  .project-hero{ max-width:100%; padding-left:0; padding-top:32px; }
+  .project-hero{ max-width:100%; padding-top:32px; }
 }
+
+/* ===== Reusable section block (label + big title + body + figure) ===== */
+.section-block{ margin:48px 0 32px; }
+.section-head{ margin-bottom:10px; }
+.section-label{
+  font-size:13px; letter-spacing:.08em; text-transform:uppercase;
+  font-weight:500; color:#888; margin-bottom:6px;
+}
+.section-title{
+  font-size:clamp(24px, 2.4vw, 34px);
+  line-height:1.3; font-weight:700; letter-spacing:-.01em;
+  margin:0 0 14px; color:#111;
+}
+.section-body{
+  max-width:60ch; font-size:17px; line-height:1.75;
+  color:#333; margin:0 0 18px;
+}
+.section-figure{ margin:18px 0 6px; }
+.section-figure .fit{
+  display:block; width:100%; max-width:100%; height:auto;
+  border-radius:12px; box-sizing:border-box;
+}
+.section-caption{ font-size:13px; color:#777; margin-top:6px; }
 
 /* ===== Explore: horizontal scroll rail (other projects) ===== */
 .explore-rail{ position:relative; margin-top:40px; }
 .explore-rail h3{ font-size:20px; margin:0 0 12px; }
-
 .explore-track{
   display:flex; gap:16px; overflow-x:auto; padding:6px 48px;
   scroll-snap-type:x mandatory; scroll-behavior:smooth;
 }
 .explore-track::-webkit-scrollbar{ display:none; }
 .explore-track{ -ms-overflow-style:none; scrollbar-width:none; }
-
 .explore-card{
   flex:0 0 280px; scroll-snap-align:start; position:relative; border-radius:18px; overflow:hidden;
   background:#f6f7f8; box-shadow:0 8px 30px rgba(0,0,0,.06);
@@ -137,7 +158,6 @@ a{ color:inherit; text-decoration:none; }
 .explore-card img{ width:100%; height:170px; object-fit:cover; display:block; }
 .explore-card .overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.35) 100%); }
 .explore-card .label{ position:absolute; left:12px; bottom:12px; color:#fff; font-weight:600; font-size:14px; }
-
 .explore-nav{
   position:absolute; top:50%; transform:translateY(-50%);
   width:40px; height:40px; border-radius:999px; border:1px solid rgba(0,0,0,.08); background:#fff;
@@ -146,18 +166,20 @@ a{ color:inherit; text-decoration:none; }
 .explore-prev{ left:4px; }
 .explore-next{ right:4px; }
 .explore-nav:hover{ transform:translateY(-50%) scale(1.05); }
-
 @media (max-width:700px){
   .explore-card{ flex-basis:70vw; }
 }
 
-/* ===== Project detail images ===== */
+/* ===== Project detail images (generic .fit) ===== */
 .fit{
-  display: block;          /* 인라인 공백 제거 */
-  max-width: 100%;         /* 컨테이너를 절대 넘지 않음 */
-  width: 100%;             /* 가로 꽉 차게 */
-  height: auto;            /* 비율 유지 */
-  border-radius: 10px;
-  margin: 0 auto;          /* 가운데 정렬 */
-  box-sizing: border-box;  /* 패딩/보더 포함 폭 계산 */
+  display:block;
+  max-width:100%;
+  width:100%;
+  height:auto;
+  border-radius:10px;
+  margin:0 auto;
+  box-sizing:border-box;
 }
+
+/* (Optional) Prevent accidental horizontal scroll on the page */
+main.container{ overflow-x:hidden; }
