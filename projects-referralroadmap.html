@@ -3,13 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Referral Roadmap — Heimin Kang</title>
-  <meta name="description" content="AI-supported referral system design for future mental healthcare." />
+  <title>Transforming the Mental Health Referral System through AI — Heimin Kang</title>
+  <meta name="description" content="Strategic & tactical roadmaps for AI integration in the mental health referral system." />
   <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    /* --- minimal add-ons (you can move to style.css) --- */
+    .hero{padding:56px 0 24px}
+    .title{font-size:clamp(28px,3vw,40px);line-height:1.2;margin:0 0 8px}
+    .meta{color:#666;font-size:14px;margin-bottom:18px}
+    .intro{font-size:18px;line-height:1.7;margin:0}
+    .rule{height:1px;border:none;background:rgba(0,0,0,.08);margin:28px 0}
+    .section{padding:20px 0}
+    .section h2{font-size:20px;margin:0 0 8px}
+    .section p{margin:0 0 16px;line-height:1.75}
+    .fit{width:100%;height:auto;border-radius:10px}
+    .caption{font-size:13px;color:#777;margin-top:6px}
+    .explore{background:#072f57;color:#fff;margin-top:40px;padding:20px 0 10px;border-radius:14px}
+    .explore h3{font-size:20px;margin:0 16px 10px}
+    .explore-grid{display:grid;grid-template-columns:repeat(5,minmax(140px,1fr));gap:10px;margin:0 16px 12px}
+    .explore a{display:block;border-radius:10px;overflow:hidden}
+    .explore img{width:100%;height:120px;object-fit:cover;display:block}
+    .back{display:inline-block;margin:18px 0 0;color:#111;text-decoration:none}
+    @media (max-width:800px){
+      .explore-grid{grid-template-columns:repeat(3,1fr)}
+      .explore img{height:100px}
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Nav (현재 페이지엔 Projects가 active 아니어도 OK) -->
+  <!-- Nav -->
   <div class="nav">
     <div class="container nav-inner">
       <div class="brand"><a href="/">Heimin Kang</a></div>
@@ -23,52 +46,91 @@
 
   <main class="container">
 
-    <!-- Hero -->
+    <!-- 1. 제목 -->
     <section class="hero">
-      <h1>Referral Roadmap</h1>
-      <p class="subtitle">Designing an AI-supported system for future mental healthcare referrals</p>
-      <div class="tags">
-        <span>Mental healthcare</span>
-        <span>System design</span>
-        <span>AI integration</span>
-        <span>Future scenario</span>
-      </div>
-      <img class="hero-img" src="assets/projects/referral-roadmap/01-hero.webp" alt="Referral Roadmap hero" />
-    </section>
+      <h1 class="title">Transforming the Mental Health Referral System through AI</h1>
 
-    <!-- Overview -->
-    <section>
-      <h2>Overview</h2>
-      <p>
-        This project explores how AI can support the referral process between general practitioners (GP) and GGZ
-        in Dutch mental healthcare. The outcome is a horizon-based roadmap aligning stakeholder needs with ethical
-        and regulatory constraints.
+      <!-- 2. 기간 + 기관 -->
+      <div class="meta">03.2029 – 05.2029 · @TU Delft · Master Thesis</div>
+
+      <!-- 3. 인트로 -->
+      <p class="intro">
+        To address mental health referral system challenges, including healthcare professionals' workload burden
+        and waiting delays in the system, I developed a future strategy (strategic roadmap & tactical roadmap)
+        of AI integration to improve the mental health referral system.
       </p>
     </section>
 
-    <!-- Research & Insights -->
-    <section>
-      <h2>Research & Insights</h2>
-      <p>Interviews, co-creation, and system mapping surfaced two core barriers and three opportunity areas.</p>
-      <img src="assets/projects/referral-roadmap/02-map.webp" alt="System map" />
-    </section>
-
-    <!-- Concept / Design -->
-    <section>
-      <h2>Concept & Design</h2>
-      <p>AI-supported triage, information handover, and feedback loops across GP–GGZ touchpoints.</p>
-      <img src="assets/projects/referral-roadmap/03-roadmap.webp" alt="Referral roadmap" />
-    </section>
-
-    <!-- Reflection / Outcome -->
-    <section>
-      <h2>Outcome & Reflection</h2>
-      <p>The roadmap informed the thesis and stakeholder workshops; it clarified systemic shifts and risks.</p>
-    </section>
-
     <hr class="rule" />
-    <p><a href="projects.html">← Back to Projects</a></p>
-  </main>
 
+    <!-- 4~6. Background -->
+    <section class="section" id="background">
+      <h2>Background</h2>
+      <!-- 5. 설명글 -->
+      <p>
+        The Dutch mental healthcare system faces prolonged waiting lists and fragmented handovers between GPs and GGZ.
+        Through literature review and stakeholder conversations, I mapped systemic bottlenecks (information loss,
+        eligibility ambiguity, and delayed feedback). These informed principles for responsible AI adoption across
+        referral touchpoints.
+      </p>
+      <!-- 6. 이미지 -->
+      <img class="fit" src="assets/projects/referral-roadmap/01-background.webp" alt="System context and bottlenecks" />
+      <div class="caption">System context map highlighting bottlenecks across GP–GGZ referral.</div>
+    </section>
+
+    <!-- 7~9. Process / methods -->
+    <section class="section" id="process">
+      <h2>Process / Methods</h2>
+      <!-- 8. 설명글 -->
+      <p>
+        Mixed-methods design research combined desk research, expert interviews, journey/system mapping,
+        and co-creation sessions. Insights were synthesized into a system-level framework and validated via
+        critique sessions with mental healthcare supporters.
+      </p>
+      <!-- 9. 이미지 -->
+      <img class="fit" src="assets/projects/referral-roadmap/02-process.webp" alt="Research process and frameworks" />
+      <div class="caption">Methods and synthesis: interviews, mapping, and framework consolidation.</div>
+    </section>
+
+    <!-- 10~12. Outcome -->
+    <section class="section" id="outcome">
+      <h2>Outcome</h2>
+      <!-- 11. 설명글 -->
+      <p>
+        The final deliverable is a two-layer roadmap: (1) a <b>strategic roadmap</b> outlining horizon shifts
+        (H1–H3) for the referral ecosystem, and (2) a <b>tactical roadmap</b> detailing AI-supported actions
+        (triage assistance, interoperable handovers, and monitoring feedback loops). The roadmaps align with
+        EU regulation themes (transparency, privacy, safety & efficacy, interoperability, risk management,
+        and user rights).
+      </p>
+      <!-- 12. 이미지 -->
+      <img class="fit" src="assets/projects/referral-roadmap/03-outcome.webp" alt="Strategic and tactical roadmaps" />
+      <div class="caption">Strategic (H1–H3) and tactical roadmaps for AI-supported referrals.</div>
+    </section>
+
+    <!-- 13. Explore my other projects -->
+    <section class="explore">
+      <h3>Explore my other projects:</h3>
+      <div class="explore-grid">
+        <a href="projects-hospitalk.html" title="HospiTALK">
+          <img src="assets/projects/hospitalk/thumb.webp" alt="HospiTALK project thumbnail" />
+        </a>
+        <a href="projects-eu-regulation-mapping.html" title="EU Regulation Mapping">
+          <img src="assets/projects/eu-regulation-mapping/thumb.webp" alt="EU Regulation Mapping thumbnail" />
+        </a>
+        <a href="projects-hospitalhero.html" title="Hospital Hero">
+          <img src="assets/projects/hospitalhero/thumb.webp" alt="Hospital Hero thumbnail" />
+        </a>
+        <a href="projects-corney.html" title="Corney">
+          <img src="assets/projects/corney/thumb.webp" alt="Corney thumbnail" />
+        </a>
+        <a href="projects-eatprint.html" title="EATPRINT">
+          <img src="assets/projects/eatprint/thumb.webp" alt="EATPRINT thumbnail" />
+        </a>
+      </div>
+    </section>
+
+    <p><a class="back" href="projects.html">← Back to Projects</a></p>
+  </main>
 </body>
 </html>
