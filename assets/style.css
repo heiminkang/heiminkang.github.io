@@ -210,25 +210,6 @@ a {
   }
 }
 
-/* --- Cards --- */
-.card {
-  background: var(--muted);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-  transition: 0.2s ease;
-}
-
-.card a {
-  display: block;
-  padding: 18px;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
-}
-
 /* --- Publications & CV Page Typography --- */
 .pub h1 {
   font-size: 32px;
