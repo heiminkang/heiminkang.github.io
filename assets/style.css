@@ -495,3 +495,56 @@ main.container{ overflow-x:hidden; } /* 우측 스크롤바 방지 */
 /* 리스트 안의 일반 li(Under Review 등)는 hover 없음 유지 */
 .pub-bullets li{ padding:2px 0; }
 
+/* === 1. Heimin Kang underline 제거 === */
+.brand a {
+  color: inherit;
+  border-bottom: none !important;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transition: color .2s ease;
+}
+.brand a:hover {
+  color: var(--accent);
+}
+.nav a.active {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom: none;
+}
+
+/* === 2. Global vertical spacing 확장 === */
+
+/* hero 내부 간격 */
+.hero {
+  row-gap: 70px !important;  /* 이미지와 텍스트 간 */
+  column-gap: 90px !important;
+  padding: 120px 0 80px !important;
+}
+
+/* hero 텍스트 내부 */
+.details p {
+  margin: 10px 0 !important;
+}
+.sub {
+  margin-bottom: 40px !important;  /* based in ~ 다음 간격 */
+}
+
+/* paragraph 섹션 사이 간격 */
+.section,
+.pub-list li,
+.pub-bullets li,
+.section-block {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+/* footer 여백 확대 */
+.footer {
+  margin-top: 100px !important;
+}
+
+/* contact 항목 간격 확대 */
+.contact {
+  gap: 18px !important;
+  margin-top: 40px !important;
+}
