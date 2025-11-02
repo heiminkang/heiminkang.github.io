@@ -109,26 +109,47 @@ a{ color:inherit; text-decoration:none; }
 .fit{ display:block; max-width:100%; width:100%; height:auto; border-radius:10px; margin:0 auto; box-sizing:border-box; }
 main.container{ overflow-x:hidden; }
 
-/* ===== Publications & CV ===== */
-/* (1) 요구: 번호 제거 + 전체 인용 텍스트 보라색 */
-.pub .pub-list{ list-style:none; padding-left:0; margin:8px 0 12px; }
-.pub .pub-list li{ margin:12px 0 16px; }
-.pub .cite-link{
-  display:block; padding:6px 10px; border-radius:12px;
-  color:var(--accent); text-decoration:none;   /* 항상 진한 보라 텍스트 */
-  transition:background .12s ease;
-}
-.pub .cite-link:hover{ background:rgba(108,99,255,.06); }
-.pub .authors{ font-variant-numeric: oldstyle-nums; color:#222; }
-.pub .title{ font-weight:600; color:var(--accent); } /* 제목도 보라색 */
-.pub .venue{ color:var(--sub); }
-.pub .subhead{ margin:18px 0 8px; font-size:.9rem; font-weight:500; color:#888; letter-spacing:.02em; font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif; }
+/* ===== Publications & CV (refined back to original) ===== */
+.pub h1{ font-size:32px; letter-spacing:-.02em; margin:18px 0; }
+.pub-header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin:18px 0; }
 .rule{ border:0; border-top:1px solid var(--line); margin:12px 0 24px; }
 
-/* (2) Extended Abstract 줄바꿈 정돈 */
-.pub .meta{ color:var(--sub); }
-.pub .talk-title{ font-weight:700; }
-.pub .stack{ margin:6px 0 0 0; }
+.pub .subhead{
+  margin:18px 0 8px;
+  font-size:.9rem; font-weight:500; color:#888; letter-spacing:.02em;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif;
+}
+
+/* 기본 목록 형식으로 복원 */
+.pub .pub-list{
+  list-style:decimal;
+  padding-left:24px;
+  margin:8px 0 12px;
+}
+.pub .pub-list li{ margin:10px 0 16px; }
+
+/* 전체 citation 클릭 가능 영역 */
+.pub .cite-link{
+  display:block;
+  padding:4px 0;
+  border-radius:6px;
+  color:inherit;                 /* 기본색 (검정) */
+  text-decoration:none;
+  transition:color .15s ease;
+}
+.pub .cite-link:hover{
+  color:var(--accent);           /* hover 시 진한 보라색 */
+}
+
+/* 글자 계층 */
+.pub .authors{ font-variant-numeric: oldstyle-nums; color:#222; }
+.pub .title{ font-weight:600; }
+.pub .venue{ color:var(--sub); }
+
+/* 리스트 bullets (Under Review 등) */
+.pub-bullets{ padding-left:28px; }
+.pub-bullets li{ margin:6px 0 10px; }
+
 
 /* ===== Explore rail (optional) ===== */
 .explore-rail{ position:relative; margin-top:40px; }
