@@ -548,3 +548,58 @@ main.container{ overflow-x:hidden; } /* 우측 스크롤바 방지 */
   gap: 18px !important;
   margin-top: 40px !important;
 }
+
+/* === Brand color logic === */
+.brand a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transition: color .2s ease;
+}
+
+/* 메인 페이지(index)에서만 보라색 + 밑줄 */
+.home .brand a {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+/* 다른 탭(CV, Publications, Projects)에서는 기본색 유지 */
+.nav a.active {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom: none;
+}
+
+/* Hover 효과는 자연스럽게 유지 */
+.brand a:hover {
+  color: var(--accent);
+}
+
+/* === Global vertical spacing 확장 (넓은 간격) === */
+.hero {
+  row-gap: 70px !important;  /* 이미지–텍스트 간격 */
+  column-gap: 90px !important;
+  padding: 120px 0 80px !important;
+}
+.details p {
+  margin: 10px 0 !important;
+}
+.sub {
+  margin-bottom: 40px !important; /* Based in ~ 다음 간격 */
+}
+.section,
+.pub-list li,
+.pub-bullets li,
+.section-block {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+.footer {
+  margin-top: 100px !important;
+}
+.contact {
+  gap: 18px !important;
+  margin-top: 40px !important;
+}
