@@ -68,7 +68,7 @@ a{ color:inherit; text-decoration:none; }
 
 /* Left: avatar + contact */
 .avatar{
-  width:260px; height:260px; border-radius:50%; overflow:hidden;
+  width:210px; height:210px; border-radius:50%; overflow:hidden;
   border:1px solid var(--line); background:var(--muted); box-shadow:var(--shadow);
   margin-bottom:36px;
 }
