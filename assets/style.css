@@ -25,7 +25,9 @@ a{ color:inherit; text-decoration:none; }
 /* 통일된 폰트 두께 & 색상 로직 */
 .brand a,
 .nav a {
+  margin-left: 18px;
   font-weight:500;
+  opacity:.75;
   color:inherit;
   text-decoration:none;
   transition:color .2s ease, opacity .2s ease;
