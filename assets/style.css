@@ -259,70 +259,87 @@ p{
   margin: 48px 0 128px;
 }
 
-/* === Explore rail: full-width 가로 리스트 + 좌/우 버튼 오버레이 === */
-.explore-rail { position: relative; margin-top: 28px; }
-.explore-rail h3 { margin: 0 0 14px; }
+/* === Explore (small horizontal cards) — matches #exploreTrack / .explore-card / .explore-prev/.explore-next === */
 
-/* 트랙(프로젝트 카드들) — 화면 가로로 꽉 차게 */
-.explore-rail .track,
-.explore-rail .slider,
-.explore-rail .list {
-  /* 당신의 마크업이 track/slider/list 중 무엇이든 폭 100% 차게 공통 적용 */
-  width: 100%;
+/* 섹션 컨테이너 */
+.explore-rail{
+  position: relative;
+  margin-top: 28px;
+}
+.explore-rail h3{
+  margin: 0 0 12px;
+}
+
+/* 좌/우 버튼(타이틀 아래 왼쪽 정렬) */
+.explore-rail .controls{
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 6px; /* 제목 아래 살짝 띄우기 */
+}
+.explore-prev,
+.explore-next{
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 10px;
+  font-size: 18px; line-height: 0;
+  cursor: pointer;
+  transition: border-color .18s ease, transform .18s ease;
+}
+.explore-prev:hover,
+.explore-next:hover{ border-color: rgba(0,0,0,.18); transform: translateY(-1px); }
+
+/* 가로 스크롤 트랙 */
+#exploreTrack{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(280px, 1fr);
-  gap: 18px;
+  grid-auto-columns: clamp(200px, 24vw, 280px); /* 카드 폭 반응형 */
+  gap: 14px;
+
   overflow-x: auto;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+
   scroll-snap-type: x mandatory;
-  padding: 8px 44px;            /* 버튼이 겹치지 않게 좌우 여백 */
+  padding: 4px 2px 8px;
   box-sizing: border-box;
 }
 
-/* === Explore: small horizontal cards (독립 네임스페이스) === */
-.explore-rail{ position:relative; margin-top:24px; }
-.explore-rail h3{ margin:0 0 12px; }
-
-.explore-actions{
-  position:absolute; right:0; top:0;
-  display:flex; gap:8px;
-}
-.explore-btn{
-  width:34px; height:34px; border-radius:10px;
-  border:1px solid var(--line); background:#fff; cursor:pointer;
-  display:grid; place-items:center; font-size:18px; line-height:0;
-}
-.explore-btn:hover{ border-color:rgba(0,0,0,.18); }
-
-/* 스트립: 가로 스크롤, 스냅, 카드 폭은 반응형으로 200~280px */
-.explore-strip{
-  display:grid;
-  grid-auto-flow:column;
-  grid-auto-columns:clamp(200px, 24vw, 280px);
-  gap:14px;
-  overflow-x:auto; overflow-y:hidden;
-  scroll-snap-type:x mandatory;
-  padding:2px 2px 6px;
-  -webkit-overflow-scrolling:touch;
-}
+/* 스크롤바 미니멀 */
+#exploreTrack::-webkit-scrollbar{ height: 6px; }
+#exploreTrack::-webkit-scrollbar-thumb{ background: rgba(0,0,0,.15); border-radius: 999px; }
 
 /* 카드 */
-.explore-item{
-  display:block; scroll-snap-align:start;
-  border:1px solid var(--line); border-radius:16px; overflow:hidden;
-  background:#fff; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-.explore-item:hover{ transform:translateY(-2px); box-shadow:var(--shadow); border-color:rgba(0,0,0,.12); }
+.explore-card{
+  display: block;
+  scroll-snap-align: start;
 
-.explore-item img{
-  display:block; width:100%; aspect-ratio:4/3; object-fit:cover;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
-.explore-item span{
-  display:block; padding:10px 12px; font-size:.95rem;
-  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+.explore-card:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: rgba(0,0,0,.12);
 }
 
-/* 미니멀 스크롤바 */
-.explore-strip::-webkit-scrollbar{ height:6px; }
-.explore-strip::-webkit-scrollbar-thumb{ background:rgba(0,0,0,.15); border-radius:999px; }
+/* 이미지 + 타이틀 */
+.explore-card img{
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;     /* 썸네일 통일 비율 */
+  object-fit: cover;
+}
+.explore-card .t{
+  display: block;
+  padding: 10px 12px;
+  font-size: .95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
