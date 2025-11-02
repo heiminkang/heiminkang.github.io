@@ -21,7 +21,7 @@ a{ color:inherit; text-decoration:none; }
   box-shadow:0 2px 20px rgba(0,0,0,.03);
 }
 .nav-inner{ display:flex; justify-content:space-between; align-items:center; padding:12px 0; }
-.brand a,.nav a{ font-weight:600; }  /* 두께 통일 */
+.brand a,.nav a{ font-weight:500; }  /* 두께 통일 */
 .brand a{ color:inherit; }
 .home .brand a{ color:var(--accent); } /* 홈에서만 보라색 (밑줄 없음) */
 .nav a{ margin-left:18px; opacity:.75; transition:color .2s ease, opacity .2s ease; }
