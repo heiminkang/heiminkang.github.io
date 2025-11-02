@@ -252,9 +252,9 @@ main.container{ overflow-x:hidden; }
 /* 전체 문단(p) 간 여백 넉넉하게 */
 p{
   margin-top:0;
-  margin-bottom:1.3em; /* ✅ 문단 간 간격 — 기본보다 약 30% 넓음 */
+  margin-bottom:2em; /* ✅ 문단 간 간격 — 기본보다 약 30% 넓음 */
 }
 
 .section-block {
-  margin: 96px 0 64px;
+  margin: 128px 0 96px;
 }
