@@ -23,14 +23,14 @@
   <main class="container">
     <!-- Hero: left image + right text -->
     <section class="hero">
-      <!-- 왼쪽: 사진 -->
+      <!-- Left: photo (aligned with brand/left text line) -->
       <div class="hero-left">
         <div class="avatar">
           <img src="/assets/profile.jpg" alt="Heimin Kang portrait">
         </div>
       </div>
 
-      <!-- 오른쪽: 텍스트 -->
+      <!-- Right: text -->
       <div class="hero-right">
         <h1 class="h1">Hello, I’m Heimin.</h1>
 
@@ -42,15 +42,19 @@
         <div class="section">
           <div class="kicker">Focus</div>
           <p class="sub">
-            I am a strategic design researcher focusing on how technologies can drive meaningful healthcare transformation.
-            My work combines user experience, systems thinking, and data-enabled, participatory approaches.
+            I am a strategic design researcher focusing on how technologies can drive
+            <span class="hl">meaningful healthcare transformation</span>.
+            My work combines user experience, systems thinking, and
+            <span class="hl">data-enabled, participatory approaches</span>.
           </p>
 
+          <!-- 3-column keyword grid; remove lone last-row item -->
+          <!-- 버블 제거하고 싶으면 class="keywords flat-tags" 로 변경 -->
           <div class="keywords">
             <span class="tag">Digital transformation</span>
             <span class="tag">Healthcare systems & service</span>
             <span class="tag">Responsible AI integration</span>
-            <span class="tag">Human-AI collaboration</span>
+            <span class="tag">Human–AI collaboration</span>
             <span class="tag">Data-enabled design</span>
             <span class="tag">Participatory design</span>
           </div>
@@ -58,8 +62,6 @@
       </div><!-- /.hero-right -->
     </section><!-- /.hero -->
   </main><!-- /.container -->
-
-  <!-- 섹션 아래 구분선 + 가운데 정렬 푸터 -->
 
   <footer class="footer">
     <p>
