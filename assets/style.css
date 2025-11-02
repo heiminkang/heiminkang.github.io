@@ -280,50 +280,49 @@ p{
   box-sizing: border-box;
 }
 
-/* 카드 기본형 */
-.explore-rail .card,
-.explore-rail .explore-card,
-.explore-rail a.card-link {
-  display: block;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--muted);
-  overflow: hidden;
-  scroll-snap-align: start;
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-.explore-rail .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+/* === Explore: small horizontal cards (독립 네임스페이스) === */
+.explore-rail{ position:relative; margin-top:24px; }
+.explore-rail h3{ margin:0 0 12px; }
 
-.explore-rail .card img,
-.explore-rail .explore-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
+.explore-actions{
+  position:absolute; right:0; top:0;
+  display:flex; gap:8px;
+}
+.explore-btn{
+  width:34px; height:34px; border-radius:10px;
+  border:1px solid var(--line); background:#fff; cursor:pointer;
+  display:grid; place-items:center; font-size:18px; line-height:0;
+}
+.explore-btn:hover{ border-color:rgba(0,0,0,.18); }
+
+/* 스트립: 가로 스크롤, 스냅, 카드 폭은 반응형으로 200~280px */
+.explore-strip{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:clamp(200px, 24vw, 280px);
+  gap:14px;
+  overflow-x:auto; overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  padding:2px 2px 6px;
+  -webkit-overflow-scrolling:touch;
 }
 
-/* 좌/우 네비 버튼 — 트랙 위에 겹쳐 배치 */
-.explore-rail .nav,
-.explore-rail .prev,
-.explore-rail .next {
-  position: absolute;
-  top: 52px;                   /* 제목 아래 정렬 */
-  width: 36px; height: 36px;
-  border-radius: 10px;
-  border: 1px solid var(--line);
-  background: #fff;
-  display: grid; place-items: center;
-  cursor: pointer;
-  z-index: 2;
+/* 카드 */
+.explore-item{
+  display:block; scroll-snap-align:start;
+  border:1px solid var(--line); border-radius:16px; overflow:hidden;
+  background:#fff; transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
-.explore-rail .prev { left: 4px; }
-.explore-rail .next { right: 4px; }
-.explore-rail .nav:hover { border-color: rgba(0,0,0,.18); }
+.explore-item:hover{ transform:translateY(-2px); box-shadow:var(--shadow); border-color:rgba(0,0,0,.12); }
 
-/* 스크롤바 미니멀 */
-.explore-rail .track::-webkit-scrollbar,
-.explore-rail .slider::-webkit-scrollbar { height: 6px; }
-.explore-rail .track::-webkit-scrollbar-thumb,
-.explore-rail .slider::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,.15); border-radius: 999px;
+.explore-item img{
+  display:block; width:100%; aspect-ratio:4/3; object-fit:cover;
 }
+.explore-item span{
+  display:block; padding:10px 12px; font-size:.95rem;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+
+/* 미니멀 스크롤바 */
+.explore-strip::-webkit-scrollbar{ height:6px; }
+.explore-strip::-webkit-scrollbar-thumb{ background:rgba(0,0,0,.15); border-radius:999px; }
