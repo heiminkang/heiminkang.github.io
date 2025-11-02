@@ -460,3 +460,9 @@ a { color: inherit; text-decoration: none; }
   display:block; max-width:100%; width:100%; height:auto; box-sizing:border-box;
 }
 main.container{ overflow-x:hidden; } /* 우측 스크롤바 방지 */
+
+/* ==== FIX: Brand should be purple only on home === */
+.brand a{ color: inherit; border-bottom: none; }          /* 기본은 일반 텍스트 */
+.home .brand a{ color: var(--accent); border-bottom:2px solid var(--accent); } /* 홈에서만 활성 표시 */
+.nav a.active{ color: var(--accent); opacity:1; border-bottom:none; }          /* CV/Projects 등은 링크만 보라색 */
+
