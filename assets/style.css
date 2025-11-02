@@ -47,10 +47,15 @@ a{ color:inherit; text-decoration:none; }
   opacity:1;
 }
 
-/* 홈(index)에서의 Heimin Kang 브랜드 색상 — 다른 탭과 동일하게 */
-.home .brand a {
-  color:var(--accent);
-  font-weight:500;
+/* Home에서 브랜드 링크는 항상 진한 보라 + 불투명 1 유지 */
+.home .brand a,
+.home .brand a:hover,
+.home .brand a:active,
+.home .brand a:focus,
+.home .brand a:visited {
+  color: var(--accent);
+  font-weight: 500;
+  opacity: 1; /* ← 이게 없어서 연해졌던 거 */
 }
 
 
