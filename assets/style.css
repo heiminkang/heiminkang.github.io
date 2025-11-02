@@ -195,3 +195,17 @@ main.container{ overflow-x:hidden; }
   color: var(--accent) !important;
 }
 
+/* ===== Non-clickable under review items ===== */
+
+/* 클릭 막기 + 색 고정 */
+.pub .pub-bullets a.cite-link {
+  pointer-events: none;          /* 클릭 불가 */
+  color: inherit;                /* 기본 텍스트 색 유지 */
+  text-decoration: none;
+}
+
+/* hover 되어도 색 안 바뀌게 */
+.pub .pub-bullets a.cite-link:hover {
+  color: inherit !important;
+  text-decoration: none;
+}
