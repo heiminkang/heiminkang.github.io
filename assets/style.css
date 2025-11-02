@@ -21,13 +21,12 @@ a{ color:inherit; text-decoration:none; }
   box-shadow:0 2px 20px rgba(0,0,0,.03);
 }
 .nav-inner{ display:flex; justify-content:space-between; align-items:center; padding:12px 0; }
-.brand a,
-.nav a{ font-weight:600; }                  /* 두께 통일 */
-.brand a{ color:inherit; }                  /* 기본은 일반색 */
-.home .brand a{ color:var(--accent); }      /* 홈에서만 보라색 */
+.brand a,.nav a{ font-weight:600; }  /* 두께 통일 */
+.brand a{ color:inherit; }
+.home .brand a{ color:var(--accent); } /* 홈에서만 보라색 (밑줄 없음) */
 .nav a{ margin-left:18px; opacity:.75; transition:color .2s ease, opacity .2s ease; }
 .nav a:hover{ color:var(--accent); opacity:1; }
-.nav a.active{ color:var(--accent); opacity:1; } /* 활성 탭 */
+.nav a.active{ color:var(--accent); opacity:1; }
 
 /* ===== Home / Hero ===== */
 .hero{
@@ -43,8 +42,8 @@ a{ color:inherit; text-decoration:none; }
   margin-bottom:36px;
 }
 .avatar img{ width:100%; height:100%; object-fit:cover; }
-.contact{ display:flex; flex-direction:column; gap:10px; margin-top:20px; }
-.contact a{ display:flex; align-items:center; gap:10px; font-size:.9rem; padding:4px 2px; opacity:.95; transition:color .18s ease; }
+.contact{ display:flex; flex-direction:column; gap:12px; margin-top:16px; } /* (4) 간격 절반 수준 축소 */
+.contact a{ display:flex; align-items:center; gap:10px; font-size:0.95rem; padding:2px 0; opacity:.95; transition:color .18s ease; }
 .contact a:hover{ color:var(--accent); }
 .contact svg{ width:18px; height:18px; fill:#111; transition:fill .18s ease, transform .18s ease; }
 .contact a:hover svg{ fill:var(--accent); transform:translateY(-1px); }
@@ -52,12 +51,12 @@ a{ color:inherit; text-decoration:none; }
 /* Right: text */
 .h1{ font-size:42px; line-height:1.15; margin:0 0 18px; font-weight:700; letter-spacing:-.02em; }
 .details p{ font-size:1.05rem; margin:6px 0; }
-.sub{ color:var(--sub); font-size:1rem; line-height:1.7; margin-bottom:16px; }
+.sub{ color:var(--sub); font-size:1rem; line-height:1.8; margin-bottom:16px; }
 .hl{ background:rgba(108,99,255,.12); padding:2px 3px; border-radius:4px; transition:background .25s ease; }
 .hl:hover{ background:rgba(108,99,255,.2); }
 
-/* Keywords */
-.keywords{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+/* Keywords (5) 위 문단 텍스트의 왼쪽 라인에 더 맞추도록 약간 왼쪽으로 당김 */
+.keywords{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; margin-left:-8px; }
 .tag{ display:inline-block; border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:.85rem; background:#fff; }
 
 /* Buttons */
@@ -79,7 +78,6 @@ a{ color:inherit; text-decoration:none; }
 .cards-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:24px 0 8px; }
 @media (max-width:1000px){ .cards-grid{ grid-template-columns:repeat(2,1fr);} }
 @media (max-width:640px){ .cards-grid{ grid-template-columns:1fr; gap:18px;} }
-
 .card{ position:relative; display:block; aspect-ratio:16/10; border:1px solid var(--line);
   border-radius:20px; overflow:hidden; background:var(--muted);
   transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease; box-shadow:0 0 0 rgba(0,0,0,0); }
@@ -99,10 +97,7 @@ a{ color:inherit; text-decoration:none; }
 .chip{ display:inline-block; border:1px solid rgba(255,255,255,.22); border-radius:999px; padding:4px 9px; font-size:.82rem; color:#fff; background:rgba(255,255,255,.06); }
 
 /* ===== Project detail (text blocks) ===== */
-.project-hero{
-  display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start;
-  max-width:60ch; padding-left:0; padding-top:6vh; gap:10px;
-}
+.project-hero{ display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; max-width:60ch; padding-left:0; padding-top:6vh; gap:10px; }
 .section-block{ margin:48px 0 32px; }
 .section-head{ margin-bottom:10px; }
 .section-label{ font-size:13px; letter-spacing:.08em; text-transform:uppercase; font-weight:500; color:#888; margin-bottom:6px; }
@@ -115,29 +110,27 @@ a{ color:inherit; text-decoration:none; }
 main.container{ overflow-x:hidden; }
 
 /* ===== Publications & CV ===== */
-.pub h1{ font-size:32px; letter-spacing:-.02em; margin:18px 0; }
-.pub-header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin:18px 0; }
-.rule{ border:0; border-top:1px solid var(--line); margin:12px 0 24px; }
-.pub .subhead{ margin:18px 0 8px; font-size:.9rem; font-weight:500; color:#888; letter-spacing:.02em;
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif; }
-.pub .pub-list{ padding-left:24px; margin:8px 0 12px; }
-.pub .pub-list li{ margin:10px 0 16px; }
-.pub .authors{ font-variant-numeric: oldstyle-nums; color:#222; }
-.pub .title{ font-weight:600; }
-.pub .venue{ color:var(--sub); }
-
-/* 전체 citation을 하나의 링크로 */
+/* (1) 요구: 번호 제거 + 전체 인용 텍스트 보라색 */
+.pub .pub-list{ list-style:none; padding-left:0; margin:8px 0 12px; }
+.pub .pub-list li{ margin:12px 0 16px; }
 .pub .cite-link{
-  display:block; padding:6px 8px; border-radius:10px;
-  transition:background .15s ease, color .15s ease;
-  color:inherit; text-decoration:none;
+  display:block; padding:6px 10px; border-radius:12px;
+  color:var(--accent); text-decoration:none;   /* 항상 진한 보라 텍스트 */
+  transition:background .12s ease;
 }
-.pub .cite-link:hover{ background:rgba(108,99,255,.06); color:var(--accent); }
-.pub .cite-link:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
-.pub-bullets{ padding-left:28px; }
-.pub-bullets li{ margin:6px 0 10px; }
+.pub .cite-link:hover{ background:rgba(108,99,255,.06); }
+.pub .authors{ font-variant-numeric: oldstyle-nums; color:#222; }
+.pub .title{ font-weight:600; color:var(--accent); } /* 제목도 보라색 */
+.pub .venue{ color:var(--sub); }
+.pub .subhead{ margin:18px 0 8px; font-size:.9rem; font-weight:500; color:#888; letter-spacing:.02em; font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif; }
+.rule{ border:0; border-top:1px solid var(--line); margin:12px 0 24px; }
 
-/* ===== Explore rail (optional component) ===== */
+/* (2) Extended Abstract 줄바꿈 정돈 */
+.pub .meta{ color:var(--sub); }
+.pub .talk-title{ font-weight:700; }
+.pub .stack{ margin:6px 0 0 0; }
+
+/* ===== Explore rail (optional) ===== */
 .explore-rail{ position:relative; margin-top:40px; }
 .explore-rail h3{ font-size:20px; margin:0 0 12px; }
 
