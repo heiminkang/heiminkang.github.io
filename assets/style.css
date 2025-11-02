@@ -191,3 +191,7 @@ main.container{ overflow-x:hidden; }
   margin-top: 0 !important;
   margin-bottom: 2em !important;
 }
+/* ===== Details 영역 문단은 간격 없이 붙이기 ===== */
+.details p {
+  margin-bottom: 0.2em !important; /* 거의 붙은 느낌으로 */
+}
