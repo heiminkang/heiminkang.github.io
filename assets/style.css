@@ -191,7 +191,9 @@ main.container{ overflow-x:hidden; }
   margin-top: 0 !important;
   margin-bottom: 2em !important;
 }
-/* ===== Details 영역 문단은 간격 없이 붙이기 ===== */
+/* ===== Details section (name card info) 붙이기 ===== */
 .details p {
-  margin-bottom: 0.2em !important; /* 거의 붙은 느낌으로 */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; /* 완전히 붙음 */
+  line-height: 1.4;            /* 줄 간격만 살짝 유지 */
 }
