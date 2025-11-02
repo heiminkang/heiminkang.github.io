@@ -73,7 +73,7 @@ a{ color:inherit; text-decoration:none; }
   margin-bottom:36px;
 }
 .avatar img{ width:100%; height:100%; object-fit:cover; }
-.contact{ display:flex; flex-direction:column; gap:12px; margin-top:15px; } /* (4) 간격 절반 수준 축소 */
+.contact{ display:flex; flex-direction:column; gap:8px; margin-top:16px; } /* (4) 간격 절반 수준 축소 */
 .contact a{ display:flex; align-items:center; gap:10px; font-size:0.9rem; padding:2px 0; opacity:.95; transition:color .18s ease; }
 .contact a:hover{ color:var(--accent); }
 .contact svg{ width:18px; height:18px; fill:#111; transition:fill .18s ease, transform .18s ease; }
