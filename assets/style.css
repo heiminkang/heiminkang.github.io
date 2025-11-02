@@ -466,3 +466,32 @@ main.container{ overflow-x:hidden; } /* 우측 스크롤바 방지 */
 .home .brand a{ color: var(--accent); border-bottom:2px solid var(--accent); } /* 홈에서만 활성 표시 */
 .nav a.active{ color: var(--accent); opacity:1; border-bottom:none; }          /* CV/Projects 등은 링크만 보라색 */
 
+/* ===== Publications: full-citation link & clearer hierarchy ===== */
+.pub .pub-list li { margin: 10px 0 16px; }
+
+/* 전체 인용을 하나의 링크로 */
+.pub .cite-link{
+  display:block;
+  padding:6px 8px;
+  border-radius:10px;
+  color:inherit;
+  text-decoration:none;
+  transition:background .15s ease, color .15s ease;
+}
+.pub .cite-link:hover{
+  background:rgba(108,99,255,.06);
+  color:var(--accent);
+}
+.pub .cite-link:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+
+/* 계층: 제목만 살짝 굵게, 저자/저널은 기본 톤 */
+.pub .title{ font-weight:600; }
+.pub .authors{ color:#222; }
+.pub .venue{ color:var(--sub); }
+
+/* 리스트 안의 일반 li(Under Review 등)는 hover 없음 유지 */
+.pub-bullets li{ padding:2px 0; }
+
