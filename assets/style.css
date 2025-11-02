@@ -27,90 +27,44 @@ a{ color:inherit; text-decoration:none; }
   opacity:1; color:var(--accent);
   border-bottom:2px solid var(--accent); padding-bottom:2px;
 }
+/* 홈에서는 좌상단 브랜드 링크(Heimin Kang)를 활성화 색으로 */
+.home .brand a{
+  color:var(--accent);
+  border-bottom:2px solid var(--accent);
+  padding-bottom:2px;
+  opacity:1;
+}
 
 /* --- Generic hero --- */
-.hero{ display:grid; grid-template-columns:.8fr 1.2fr; gap:46px; align-items:center; padding:64px 0 24px;}
+.hero{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:64px;
+  align-items:flex-start;       /* ↑ 위 정렬 */
+  padding:80px 0 24px;
+}
 @media (max-width:900px){ .hero{ grid-template-columns:1fr; } }
-.avatar{ width:260px; height:260px; border-radius:50%; overflow:hidden; border:1px solid var(--line);
-  background:var(--muted); box-shadow:var(--shadow); margin:0 auto;}
+
+.hero-left{ display:flex; justify-content:flex-start; align-self:flex-start; }
+.avatar{
+  width:240px; height:240px; border-radius:50%; overflow:hidden;
+  border:1px solid var(--line); background:var(--muted); box-shadow:var(--shadow); margin:0;
+}
 .avatar img{ width:100%; height:100%; object-fit:cover; }
-@media (max-width:900px){ .avatar{ width:180px; height:180px; margin-bottom:20px; } }
+@media (max-width:900px){ .avatar{ width:200px; height:200px; margin-bottom:16px; } }
 
-.h1{ font-size:42px; line-height:1.15; margin:14px 0 10px; font-weight:700; letter-spacing:-.02em;}
-.lead{ font-size:20px; line-height:1.45; margin:8px 0 10px; letter-spacing:-.01em;}
-.kicker{ font-size:.9rem; opacity:.75; margin-bottom:6px;}
+.h1{ font-size:42px; line-height:1.15; margin:10px 0 6px; font-weight:700; letter-spacing:-.02em;}
 .sub{ color:var(--sub); font-size:1rem; line-height:1.6;}
-.keywords{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
-.tag{ display:inline-block; border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:.85rem;}
+.details p{ margin:2px 0; }            /* 🎓/📍 줄 간격 압축 */
+.hero-right{ max-width:62ch; display:flex; flex-direction:column; }
 
-/* --- Buttons --- */
-.cta{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;}
-.btn{ padding:11px 16px; border-radius:12px; border:1px solid var(--line);
-  background:var(--fg); color:#fff; box-shadow:var(--shadow); transition:.2s ease;}
-.btn:hover{ opacity:.9; }
-.btn.secondary{ background:transparent; color:var(--fg); }
-
-/* --- Sections (legacy) --- */
-.section{ padding:32px 0; }
-.section h2{ font-size:22px; margin:0 0 10px; }
-
-.grid{ display:grid; gap:var(--gap); grid-template-columns:repeat(3,1fr); }
-@media (max-width:1000px){ .grid{ grid-template-columns:repeat(2,1fr);} }
-@media (max-width:640px){ .grid{ grid-template-columns:1fr;} }
-
-/* --- Publications / CV --- */
-.pub h1{ font-size:32px; letter-spacing:-.02em; margin:18px 0; }
-.pub-header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin:18px 0; }
-.rule{ border:0; border-top:1px solid var(--line); margin:12px 0 24px; }
-.pub .subhead{ margin:18px 0 8px; font-size:.9rem; font-weight:500; color:#888; letter-spacing:.02em;
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif;}
-.pub .pub-list{ padding-left:24px; margin:8px 0 12px; }
-.pub .pub-list li{ margin:6px 0 10px; }
-.pub .authors{ font-variant-numeric: oldstyle-nums; }
-.pub .title{ font-weight:600; }
-.pub .venue{ color:var(--sub); }
-.serif{ font-family: ui-serif,Georgia,"Times New Roman",Times,serif; }
-
-.pdf-link { margin-left: 8px; color: #0072ce; font-size: 0.9em; text-decoration: none; }
-.pdf-link:hover { text-decoration: underline; }
-
-/* --- Footer --- */
-.footer{ border-top:1px dashed var(--line); padding-top:14px; margin:60px auto 40px; max-width:var(--max);
-  padding-left:24px; padding-right:24px; text-align:center; font-size:.9rem; color:var(--sub); line-height:1.6; }
-.footer a{ color:inherit; text-decoration:none; border-bottom:1px solid transparent; transition:border-color .2s ease;}
-.footer a:hover{ border-color:var(--line); }
-
-/* --- Home(hero) override & tweaks from feedback --- */
-.home .hero{
-  grid-template-columns: .8fr 1.2fr;
-  gap: 64px;               /* 사진–텍스트 간격 ↑ */
-  align-items: center;
-  padding:80px 0;
-}
-.hero-left{ display:flex; justify-content:flex-start; }
-.home .avatar{ width:240px; height:240px; border-radius:50%; overflow:hidden; border:1px solid var(--line);
-  background:var(--muted); box-shadow:var(--shadow); margin:0; }
-.home .avatar img{ width:100%; height:100%; object-fit:cover; }
-@media (max-width:900px){
-  .home .hero{ grid-template-columns:1fr; }
-  .home .avatar{ width:200px; height:200px; margin-bottom:16px; }
-}
-
-/* 헤드라인–보조 정보 간격 압축 */
-.h1{ margin:10px 0 6px; }
-.details p{ margin:2px 0; }
-
-/* 'Focus'는 굵게(싫으면 HTML에서 제거만 해도 됨) */
-.kicker{ font-size:.95rem; font-weight:700; opacity:1; color:var(--fg); margin:10px 0 6px; }
-
-/* 키워드: 텍스트 기준 좌측 라인과 정렬 + 3열 그리드로 고아줄 방지 */
-.hero-right{ max-width:62ch; } /* 본문 폭 안정화 */
+/* 키워드: 텍스트 좌측 라인과 정렬 + 3열로 고아줄 방지 */
 .keywords{
   display:grid; grid-template-columns:repeat(3, max-content);
   gap:10px 10px; justify-content:start;
-  margin-top:12px; margin-left:-13px; /* padding+border 보정 */
+  margin-top:12px; margin-left:-13px;  /* padding+border 보정 */
 }
-.tag{ font-size:.86rem; padding:6px 12px; }
+.tag{ display:inline-block; border:1px solid var(--line); border-radius:999px; padding:6px 12px; font-size:.86rem; }
 @media (max-width:900px){ .keywords{ display:flex; flex-wrap:wrap; gap:8px; margin-left:0; } }
 
 /* 텍스트 마커(논문 하이라이트 느낌) */
@@ -125,7 +79,20 @@ a{ color:inherit; text-decoration:none; }
   background:linear-gradient(transparent 65%, rgba(107,92,255,.18) 0);
 }
 
-/* ===== Portfolio cards (unchanged) ===== */
+/* --- Buttons (unchanged) --- */
+.cta{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;}
+.btn{ padding:11px 16px; border-radius:12px; border:1px solid var(--line);
+  background:var(--fg); color:#fff; box-shadow:var(--shadow); transition:.2s ease;}
+.btn:hover{ opacity:.9; }
+.btn.secondary{ background:transparent; color:var(--fg); }
+
+/* --- Footer --- */
+.footer{ border-top:1px dashed var(--line); padding-top:14px; margin:60px auto 40px; max-width:var(--max);
+  padding-left:24px; padding-right:24px; text-align:center; font-size:.9rem; color:var(--sub); line-height:1.6; }
+.footer a{ color:inherit; text-decoration:none; border-bottom:1px solid transparent; transition:border-color .2s ease;}
+.footer a:hover{ border-color:var(--line); }
+
+/* ===== Portfolio cards / sections (원래 코드 유지) ===== */
 .cards-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:24px 0 8px;}
 @media (max-width:1000px){ .cards-grid{ grid-template-columns:repeat(2,1fr);} }
 @media (max-width:640px){ .cards-grid{ grid-template-columns:1fr; gap:18px;} }
@@ -151,11 +118,8 @@ a{ color:inherit; text-decoration:none; }
 .card-link:hover{ transform:translateY(-3px); border-color:rgba(0,0,0,.10); box-shadow:var(--shadow); }
 @media (hover:none){ .card-content{ opacity:1; transform:none;} .card-gradient{ opacity:1; } }
 
-/* ===== Project detail / sections (original) ===== */
-.project-hero{
-  display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start;
-  max-width:60ch; padding-left:0; padding-top:6vh;
-}
+/* Sections */
+.project-hero{ display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; max-width:60ch; padding-left:0; padding-top:6vh; }
 .project-hero .title{ font-size:clamp(28px,3vw,42px); line-height:1.2; margin:0 0 10px; }
 .project-hero .meta{ font-size:15px; color:#555; margin-bottom:20px; }
 .project-hero .intro{ font-size:18px; line-height:1.75; margin:0; color:#222; }
@@ -163,62 +127,14 @@ a{ color:inherit; text-decoration:none; }
 
 .section-block{ margin:48px 0 32px; }
 .section-head{ margin-bottom:10px; }
-.section-label{
-  font-size:13px; letter-spacing:.08em; text-transform:uppercase;
-  font-weight:500; color:#888; margin-bottom:6px;
-}
-.section-title{
-  font-size:clamp(20px, 1.8vw, 28px);
-  line-height:1.3; font-weight:700; letter-spacing:-.01em;
-  margin:0 0 14px; color:#111;
-}
-.section-body{
-  max-width:100%; font-size:16px; line-height:1.75;
-  color:#333; margin:0 0 18px;
-}
+.section-label{ font-size:13px; letter-spacing:.08em; text-transform:uppercase; font-weight:500; color:#888; margin-bottom:6px; }
+.section-title{ font-size:clamp(20px, 1.8vw, 28px); line-height:1.3; font-weight:700; letter-spacing:-.01em; margin:0 0 14px; color:#111; }
+.section-body{ max-width:100%; font-size:16px; line-height:1.75; color:#333; margin:0 0 18px; }
 .section-figure{ margin:18px 0 6px; }
-.section-figure .fit{
-  display:block; width:100%; max-width:100%; height:auto;
-  border-radius:12px; box-sizing:border-box;
-}
+.section-figure .fit{ display:block; width:100%; max-width:100%; height:auto; border-radius:12px; box-sizing:border-box; }
 .section-caption{ font-size:13px; color:#777; margin-top:6px; }
-
-/* Explore rail */
-.explore-rail{ position:relative; margin-top:40px; }
-.explore-rail h3{ font-size:20px; margin:0 0 12px; }
-.explore-track{
-  display:flex; gap:16px; overflow-x:auto; padding:6px 48px;
-  scroll-snap-type:x mandatory; scroll-behavior:smooth;
-}
-.explore-track::-webkit-scrollbar{ display:none; }
-.explore-track{ -ms-overflow-style:none; scrollbar-width:none; }
-.explore-card{
-  flex:0 0 280px; scroll-snap-align:start; position:relative; border-radius:18px; overflow:hidden;
-  background:#f6f7f8; box-shadow:0 8px 30px rgba(0,0,0,.06);
-  transition:transform .25s ease, box-shadow .25s ease;
-}
-.explore-card:hover{ transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,.08); }
-.explore-card img{ width:100%; height:170px; object-fit:cover; display:block; }
-.explore-card .overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.35) 100%); }
-.explore-card .label{ position:absolute; left:12px; bottom:12px; color:#fff; font-weight:600; font-size:14px; }
-.explore-nav{
-  position:absolute; top:50%; transform:translateY(-50%);
-  width:40px; height:40px; border-radius:999px; border:1px solid rgba(0,0,0,.08); background:#fff;
-  box-shadow:0 6px 20px rgba(0,0,0,.08); display:grid; place-items:center; cursor:pointer; user-select:none;
-}
-.explore-prev{ left:4px; }
-.explore-next{ right:4px; }
-.explore-nav:hover{ transform:translateY(-50%) scale(1.05); }
-@media (max-width:700px){ .explore-card{ flex-basis:70vw; } }
-
-/* Generic .fit */
-.fit{
-  display:block; max-width:100%; width:100%; height:auto;
-  border-radius:10px; margin:0 auto; box-sizing:border-box;
-}
 
 /* Selection color */
 ::selection{ background:rgba(107,92,255,.28); color:inherit; }
 
-/* Prevent accidental horizontal scroll */
-main.container{ overflow-x:hidden; }
+/* Pr*
