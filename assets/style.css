@@ -55,7 +55,7 @@ a{ color:inherit; text-decoration:none; }
 .home .brand a:visited {
   color: var(--accent);
   font-weight: 500;
-  opacity: 1; /* ← 이게 없어서 연해졌던 거 */
+  opacity: 1;
 }
 
 
@@ -73,7 +73,7 @@ a{ color:inherit; text-decoration:none; }
   margin-bottom:36px;
 }
 .avatar img{ width:100%; height:100%; object-fit:cover; }
-.contact{ display:flex; flex-direction:column; gap:8px; margin-top:16px; } /* (4) 간격 절반 수준 축소 */
+.contact{ display:flex; flex-direction:column; gap:8px; margin-top:16px; }
 .contact a{ display:flex; align-items:center; gap:10px; font-size:0.9rem; padding:2px 0; opacity:.95; transition:color .18s ease; }
 .contact a:hover{ color:var(--accent); }
 .contact svg{ width:18px; height:18px; fill:#111; transition:fill .18s ease, transform .18s ease; }
@@ -81,12 +81,12 @@ a{ color:inherit; text-decoration:none; }
 
 /* Right: text */
 .h1{ font-size:42px; line-height:1.15; margin:0 0 18px; font-weight:700; letter-spacing:-.02em; }
-.details p{ font-size:0.9rem; margin:6px 0; }
+.details p{ font-size:0.9rem; margin:0 0 1.2em; }
 .sub{ color:var(--sub); font-size:1rem; line-height:1.8; margin-bottom:16px; }
 .hl{ background:rgba(108,99,255,.12); padding:2px 3px; border-radius:4px; transition:background .25s ease; }
 .hl:hover{ background:rgba(108,99,255,.2); }
 
-/* Keywords (5) 위 문단 텍스트의 왼쪽 라인에 더 맞추도록 약간 왼쪽으로 당김 */
+/* Keywords */
 .keywords{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; margin-left:-8px; }
 .tag{ display:inline-block; border:1px solid var(--line); border-radius:999px; padding:6px 14px; font-size:.85rem; background:#fff; }
 
@@ -105,7 +105,7 @@ a{ color:inherit; text-decoration:none; }
 .footer a{ color:inherit; border-bottom:1px solid transparent; transition:border-color .2s ease; }
 .footer a:hover{ border-color:var(--line); }
 
-/* ===== Project cards (list page) ===== */
+/* ===== Project cards ===== */
 .cards-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:24px 0 8px; }
 @media (max-width:1000px){ .cards-grid{ grid-template-columns:repeat(2,1fr);} }
 @media (max-width:640px){ .cards-grid{ grid-template-columns:1fr; gap:18px;} }
@@ -127,7 +127,7 @@ a{ color:inherit; text-decoration:none; }
 .chips{ display:flex; flex-wrap:wrap; gap:6px; }
 .chip{ display:inline-block; border:1px solid rgba(255,255,255,.22); border-radius:999px; padding:4px 9px; font-size:.82rem; color:#fff; background:rgba(255,255,255,.06); }
 
-/* ===== Project detail (text blocks) ===== */
+/* ===== Project detail ===== */
 .project-hero{ display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; max-width:60ch; padding-left:0; padding-top:6vh; gap:10px; }
 .section-block{ margin:48px 0 32px; }
 .section-head{ margin-bottom:10px; }
@@ -140,7 +140,7 @@ a{ color:inherit; text-decoration:none; }
 .fit{ display:block; max-width:100%; width:100%; height:auto; border-radius:10px; margin:0 auto; box-sizing:border-box; }
 main.container{ overflow-x:hidden; }
 
-/* ===== Publications & CV (refined back to original) ===== */
+/* ===== Publications & CV ===== */
 .pub h1{ font-size:32px; letter-spacing:-.02em; margin:18px 0; }
 .pub-header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin:18px 0; }
 .rule{ border:0; border-top:1px solid var(--line); margin:12px 0 24px; }
@@ -151,47 +151,19 @@ main.container{ overflow-x:hidden; }
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif;
 }
 
-/* 기본 목록 형식으로 복원 */
-.pub .pub-list{
-  list-style:decimal;
-  padding-left:24px;
-  margin:8px 0 12px;
-}
+.pub .pub-list{ list-style:decimal; padding-left:24px; margin:8px 0 12px; }
 .pub .pub-list li{ margin:10px 0 16px; }
 
-/* 전체 citation 클릭 가능 영역 */
-.pub .cite-link{
-  display:block;
-  padding:4px 0;
-  border-radius:6px;
-  color:inherit;                 /* 기본색 (검정) */
-  text-decoration:none;
-  transition:color .15s ease;
-}
-.pub .cite-link:hover{
-  color:var(--accent);           /* hover 시 진한 보라색 */
-}
+.pub .cite-link{ display:block; padding:4px 0; border-radius:6px; color:inherit; text-decoration:none; transition:color .15s ease; }
+.pub .cite-link:hover{ color:var(--accent); }
 
-/* 글자 계층 */
-.pub .authors{ font-variant-numeric: oldstyle-nums; color:#222; }
+.pub .authors{ color:#222; }
 .pub .title{ font-weight:600; }
 .pub .venue{ color:var(--sub); }
 
-/* 리스트 bullets (Under Review 등) */
 .pub-bullets{ padding-left:28px; }
 .pub-bullets li{ margin:6px 0 10px; }
 
-
-/* ===== Explore rail (optional) ===== */
-.explore-rail{ position:relative; margin-top:40px; }
-.explore-rail h3{ font-size:20px; margin:0 0 12px; }
-
-/* ===== Spacing utilities ===== */
-.spacer-10{ margin-top:10px; } .spacer-20{ margin-top:20px; }
-.spacer-30{ margin-top:30px; } .spacer-40{ margin-top:40px; }
-.spacer-60{ margin-top:60px; } .spacer-80{ margin-top:80px; } .spacer-100{ margin-top:100px; }
-
-/* 전체 citation 한 줄을 보라색으로 */
 .pub .cite-link:hover,
 .pub .cite-link:hover .authors,
 .pub .cite-link:hover .title,
@@ -200,23 +172,22 @@ main.container{ overflow-x:hidden; }
   color: var(--accent) !important;
 }
 
-/* ===== Non-clickable under review items ===== */
-
-/* 클릭 막기 + 색 고정 */
 .pub .pub-bullets a.cite-link {
-  pointer-events: none;          /* 클릭 불가 */
-  color: inherit;                /* 기본 텍스트 색 유지 */
+  pointer-events: none;
+  color: inherit;
   text-decoration: none;
 }
-
-/* hover 되어도 색 안 바뀌게 */
 .pub .pub-bullets a.cite-link:hover {
   color: inherit !important;
   text-decoration: none;
 }
 
-/* 전체 문단(p) 간 여백 넉넉하게 */
-p {
-  margin-top: 0;
-  margin-bottom: 1.3em;   /* ✅ 문단 간 간격 — 기본보다 약 30% 넓음 */
+/* ===== 문단 간 여백 통합 (global spacing) ===== */
+.section-body p,
+.pub p,
+.project-hero p,
+.home .hero .sub,
+.home .hero .details p {
+  margin-top: 0 !important;
+  margin-bottom: 1.3em !important;
 }
