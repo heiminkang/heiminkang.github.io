@@ -258,3 +258,72 @@ p{
 .section-block {
   margin: 48px 0 96px;
 }
+
+/* === Explore rail: full-width 가로 리스트 + 좌/우 버튼 오버레이 === */
+.explore-rail { position: relative; margin-top: 28px; }
+.explore-rail h3 { margin: 0 0 14px; }
+
+/* 트랙(프로젝트 카드들) — 화면 가로로 꽉 차게 */
+.explore-rail .track,
+.explore-rail .slider,
+.explore-rail .list {
+  /* 당신의 마크업이 track/slider/list 중 무엇이든 폭 100% 차게 공통 적용 */
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 1fr);
+  gap: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  padding: 8px 44px;            /* 버튼이 겹치지 않게 좌우 여백 */
+  box-sizing: border-box;
+}
+
+/* 카드 기본형 */
+.explore-rail .card,
+.explore-rail .explore-card,
+.explore-rail a.card-link {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--muted);
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.explore-rail .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+.explore-rail .card img,
+.explore-rail .explore-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 좌/우 네비 버튼 — 트랙 위에 겹쳐 배치 */
+.explore-rail .nav,
+.explore-rail .prev,
+.explore-rail .next {
+  position: absolute;
+  top: 52px;                   /* 제목 아래 정렬 */
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  display: grid; place-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.explore-rail .prev { left: 4px; }
+.explore-rail .next { right: 4px; }
+.explore-rail .nav:hover { border-color: rgba(0,0,0,.18); }
+
+/* 스크롤바 미니멀 */
+.explore-rail .track::-webkit-scrollbar,
+.explore-rail .slider::-webkit-scrollbar { height: 6px; }
+.explore-rail .track::-webkit-scrollbar-thumb,
+.explore-rail .slider::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.15); border-radius: 999px;
+}
