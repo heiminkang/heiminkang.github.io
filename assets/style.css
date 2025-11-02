@@ -410,3 +410,53 @@ a { color: inherit; text-decoration: none; }
 .pub-bullets li {
   margin: 6px 0 10px;
 }
+
+/* ===========================
+   PROJECTS: revert to original layout
+   =========================== */
+
+/* 1) 프로젝트 카드 그리드 — 예전 값 */
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin:24px 0 8px;
+}
+@media (max-width:1000px){ .cards-grid{ grid-template-columns:repeat(2,1fr);} }
+@media (max-width:640px){ .cards-grid{ grid-template-columns:1fr; gap:18px;} }
+
+/* 2) 프로젝트 디테일 히어로 — 예전: 좌측 정렬 단일 컬럼(읽기 폭 60ch) */
+.project-hero{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  max-width:60ch;    /* 읽기 좋은 폭 */
+  padding-left:0;
+  padding-top:6vh;   /* 상단 여백 */
+  gap:10px;
+}
+
+/* 3) 섹션 간격 — 예전 기본값 */
+.section-block{ margin:48px 0 32px; }
+.section-head{ margin-bottom:10px; }
+.section-title{
+  font-size:clamp(20px, 1.8vw, 28px);
+  line-height:1.3; font-weight:700; letter-spacing:-.01em;
+  margin:0 0 14px; color:#111;
+}
+.section-body{
+  max-width:100%; font-size:16px; line-height:1.75;
+  color:#333; margin:0 0 18px;
+}
+.section-figure{ margin:18px 0 6px; }
+.section-caption{ font-size:13px; color:#777; margin-top:6px; }
+
+/* 4) 관련 프로젝트 레일 — 예전 값 */
+.explore-rail{ position:relative; margin-top:40px; }
+
+/* 5) 이미지/도표가 가로로 넘치지 않도록 (안전장치) */
+.fit, .section-figure img, .section-figure .fit, .project-hero img{
+  display:block; max-width:100%; width:100%; height:auto; box-sizing:border-box;
+}
+main.container{ overflow-x:hidden; } /* 우측 스크롤바 방지 */
