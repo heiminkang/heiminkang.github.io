@@ -1,68 +1,102 @@
-<div class="project-card" onclick="openModal()">
-  <div class="placeholder">Regulation Mapping project</div>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Making the Hospital Hero app more inclusive for children with auditory or visual impairments — Heimin Kang</title>
+  <meta name="description" content="eHealth improvements for the Hospital Hero app." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
 
-<div id="projectModal" class="modal">
-  <div class="modal-content">
-    <p><b>Work in progress</b> — preparing submission to a peer-reviewed conference.</p>
-    <button onclick="closeModal()">Close</button>
+  <!-- Nav -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><a href="/">Heimin Kang</a></div>
+      <div>
+        <a href="cv.html">CV</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html" class="active">Projects</a>
+      </div>
+    </div>
   </div>
-</div>
+
+  <main class="container">
+
+    <!-- HERO (화면 절반 폭, 좌측 정렬) -->
+    <section class="hero project-hero">
+      <h1 class="title">Making the Hospital Hero app more inclusive for children with auditory or visual impairments</h1>
+      <div class="meta">11.2024 – 01.2025 @TU Delft · Course: eHealth Design for a Healthy Society</div>
+      <p class="intro">
+        Hospital Hero helps children and parents reduce anxiety before, during, and after hospital visits through storytelling, 
+        mini-games, and a question notebook for doctors. Our project focuses on making the app inclusive for children with visual 
+        or auditory impairments—improving access without stigma and keeping the experience engaging. We combined literature, journey mapping, 
+        expert input (Visio and product experts), and concept iteration to propose tactile (haptic) interactions alongside an inclusive UI so 
+        that more children can prepare with confidence and autonomy.
+      </p>
+    </section>
+
+    <hr class="rule" />
+
+    <section class="section-block" id="placeholder">
+  <div class="wip-container">
+    <h2 class="wip-title"><span id="typing"></span></h2>
+    <p class="wip-note">Preparing final visuals and submission for review.</p>
+  </div>
+</section>
 
 <style>
-.project-card {
-  width: 300px;
-  height: 180px;
-  border-radius: 12px;
-  background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-.project-card:hover {
-  background-color: #e8e8e8;
-  transform: scale(1.02);
-}
-.placeholder {
-  font-size: 1rem;
-  color: #555;
-  font-weight: 500;
-}
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0,0,0,0.5);
-}
-.modal-content {
-  background: white;
-  margin: 20% auto;
-  padding: 20px 30px;
-  width: fit-content;
-  border-radius: 10px;
+.wip-container {
   text-align: center;
+  padding: 120px 0;
+  font-family: 'Inter', sans-serif;
 }
-button {
-  margin-top: 10px;
-  padding: 8px 16px;
-  border: none;
-  background-color: #333;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
+.wip-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  border-right: 3px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s step-end infinite;
 }
-button:hover {
-  background-color: #000;
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+.wip-note {
+  color: #666;
+  font-size: 1rem;
 }
 </style>
 
 <script>
-function openModal() {
-  document.getElementById('projectModal').style.display = 'block';
+const text = "Work in progress...";
+let i = 0;
+let isDeleting = false;
+const speed = 100; // 타이핑 속도
+const delay = 1500; // 타이핑 완료 후 멈춤 시간
+
+function loopTyping() {
+  const typingElement = document.getElementById("typing");
+  
+  if (!isDeleting && i < text.length) {
+    typingElement.textContent += text.charAt(i);
+    i++;
+    setTimeout(loopTyping, speed);
+  } else if (isDeleting && i > 0) {
+    typingElement.textContent = text.substring(0, i - 1);
+    i--;
+    setTimeout(loopTyping, speed / 2);
+  } else if (i === text.length && !isDeleting) {
+    isDeleting = true;
+    setTimeout(loopTyping, delay);
+  } else if (i === 0 && isDeleting) {
+    isDeleting = false;
+    setTimeout(loopTyping, speed);
+  }
 }
-function closeModal() {
-  document.getElementById('projectModal').style.display = 'none';
-}
+
+loopTyping();
 </script>
