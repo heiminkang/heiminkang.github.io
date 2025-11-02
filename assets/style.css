@@ -160,3 +160,20 @@ main.container{ overflow-x:hidden; }
 .card-text{ color:#fff; text-shadow:0 1px 6px rgba(0,0,0,.28); }
 .card-title{ margin:0 0 8px; font
 
+/* ===== Publications/CV page polish ===== */
+
+/* Header: title left, button right (already flex) — just ensure spacing */
+.pub-header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin:18px 0; }
+
+/* Make publication titles clickable with accent hover */
+.pub .title-link{
+  color:inherit; text-decoration:none; transition:color .18s ease;
+}
+.pub .title-link:hover{ color:var(--accent); }
+
+/* A little more breathing room on lists */
+.pub .pub-list li{ margin:10px 0 14px; }
+
+/* Keep old right-aligned action link look */
+.btn.secondary{ background:transparent; color:var(--fg); border:1px solid var(--line); }
+.btn.secondary:hover{ color:var(--accent); border-color:var(--accent); }
