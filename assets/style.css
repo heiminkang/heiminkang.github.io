@@ -343,3 +343,29 @@ p{
 @media (max-width: 700px) {
   .explore-card { flex-basis: 70vw; }
 }
+
+/* ===== Navigation arrows (Back / Forward links) ===== */
+.nav-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--fg);
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-arrow:hover {
+  color: var(--accent);      /* hover 시 보라색 */
+  transform: translateX(2px);
+}
+
+.nav-arrow.back:hover {
+  transform: translateX(-2px);   /* 뒤로가기 화살표는 반대 방향 */
+}
+
+.nav-arrow::selection {
+  background: rgba(108,99,255,.15);
+}
