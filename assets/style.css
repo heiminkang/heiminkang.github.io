@@ -183,3 +183,13 @@ main.container{ overflow-x:hidden; }
 .spacer-10{ margin-top:10px; } .spacer-20{ margin-top:20px; }
 .spacer-30{ margin-top:30px; } .spacer-40{ margin-top:40px; }
 .spacer-60{ margin-top:60px; } .spacer-80{ margin-top:80px; } .spacer-100{ margin-top:100px; }
+
+/* 전체 citation 한 줄을 보라색으로 */
+.pub .cite-link:hover,
+.pub .cite-link:hover .authors,
+.pub .cite-link:hover .title,
+.pub .cite-link:hover .venue,
+.pub .cite-link:hover .venue i {
+  color: var(--accent) !important;
+}
+
