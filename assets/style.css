@@ -372,20 +372,21 @@ p{
 
 
 .project-meta {
-  margin-top: 0.75rem;
-  margin-bottom: 1.75rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   font-size: 0.95rem;
-  line-height: 1.5;
-  color: #666;
+  line-height: 1.55; /* 줄간격을 넉넉하게 */
+  color: #555;
 }
 
 .project-meta-item {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.25rem;
+  display: grid;
+  grid-template-columns: 10rem 1fr; /* 라벨 열 넓혀서 자연스럽게 */
+  column-gap: 1rem;
+  margin-bottom: 0.4rem;
 }
 
 .project-meta-label {
   font-weight: 600;
-  min-width: 9rem; /* 라벨 길이 맞추기 */
 }
+
