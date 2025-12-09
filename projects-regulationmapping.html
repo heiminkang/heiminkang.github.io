@@ -28,76 +28,201 @@
     <section class="hero project-hero">
       <h1 class="title">Bridging Innovation and Regulation: A Regulatory Mapping for Designing Digital Mental Health Interventions</h1>
       <div class="meta">11.2024 – 01.2025 @TU Delft · Course: Research</div>
-      <p class="intro">
-        As digital mental health interventions such as AI chatbots rapidly expand, integrating regulatory frameworks into their 
-        design remains essential yet challenging. This project maps six key EU regulations onto 
-        the development framework for complex health interventions to explore how policy requirements influence each stage of design. 
-        The study identifies tensions between regulation and innovation while revealing opportunities to embed compliance and ethical 
-        principles early in the design process, ultimately bridging innovation and regulation in digital mental health.
-      </p>
-    </section>
+      <div class="project-meta">
+        <div class="project-meta-item">
+          <span class="project-meta-label">Supervisor</span>
+          <span>Jiwon Jung</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Role &amp; Responsibility</span>
+          <span>Individual project; desk research, thematic analysis, LLM co-piloting, regulatory mapping</span>
+        </div>
+        <div class="project-meta-item">
+          <span class="project-meta-label">Dissemination</span>
+          <span>Submitted to DESIGN 2026</span>
+        </div>
+      </div>
+      
 
     <hr class="rule" />
 
-    <section class="section-block" id="placeholder">
-  <div class="wip-container">
-    <h2 class="wip-title"><span id="typing"></span></h2>
-    <p class="wip-note">Preparing final visuals and submission for review.</p>
-  </div>
+    <!-- Background -->
+    <section class="section-block" id="background">
+      <div class="section-head">
+        <div class="section-label">Background</div>
+        <h2 class="section-title">How might we advance design process to be more responsible and implementable?</h2>
+      </div>
+
+      <p class="section-body">
+        The development of digital mental health interventions, such as mobile apps, web platforms, and AI chatbots, 
+        is increasingly shaped by complex and rapidly evolving EU regulations. Designers and developers must navigate 
+        overlapping requirements across GDPR, the AI Act, EHDS, HTA, MDR, and IVDR, yet limited guidance exists on how these 
+        regulations practically influence design and development. This project investigates how regulatory considerations 
+        can be integrated into the early stages of designing digital mental health interventions. The goal was to develop a 
+        regulatory mapping approach that makes the complex regulatory landscape more interpretable and actionable for design and innovation processes.
+      </p>
+
+      <figure class="section-figure">
+        <img class="fit" src="assets/projects/regulationmapping/regulationmapping.background.jpg" alt="Influence of key EU regulations on e-mental health interventions" loading="lazy" />
+        <figcaption class="section-caption">Influence of Key EU Regulations on E-mental Health Interventions.</figcaption>
+      </figure>
+
+      
+    </section>
+
+
+    <!-- Process / Methods -->
+    <section class="section-block" id="process">
+      <div class="section-head">
+        <div class="section-label">Methods </div>
+        <h2 class="section-title">Developing  Regulatory Mapping Approach.</h2>
+      </div>
+
+      <p class="section-body">
+        A structured two-phase research process was used. Specifically, this study incorporated co-piloting with a 
+        Large Language Model (LLM). As this was an exploratory project, expert validation was not conducted; therefore, 
+        future research should further examine the mapping’s validity and usability.
+      </p>
+
+      <figure class="section-figure">
+        <img class="fit" src="assets/projects/regulationmapping/regulationamapping.process.jpg" alt="Research process and methodology for regulatory mapping" loading="lazy" />
+        <figcaption class="section-caption">Research Process and Methodology for Regulatory Mapping.</figcaption>
+      </figure>
+  
+
+    </section>
+    <section class="section-block" id="process">
+      <div class="section-head">
+        <div class="section-label">Insights </div>
+        <h2 class="section-title">From Tensions Toward Opportunities.</h2>
+      </div>
+
+      <p class="section-body">
+        Through the mapping activity, key insights were identified. The tensions highlight what must be addressed 
+        in future regulation-aware design processes. Although these tensions present challenges, regulation also emerged 
+        as an opportunity by providing structured design checkpoints and methodological scaffolds that help designers select 
+        appropriate methods and ensure responsible, implementable outcomes throughout the process. These tension–opportunity 
+        insights demonstrate the potential for regulatory constraints to guide responsible innovation rather than hinder it.
+      </p>
+      <figure class="section-figure">
+        <img class="fit" src="assets/projects/regulationmapping/regulationmapping.insights.jpg" 
+             alt="Key insights of the regulatiory mapping" loading="lazy" />
+        <figcaption class="section-caption">
+          Key Insights of the Regulatory Mapping.
+        </figcaption>
+      </figure>
+
 </section>
 
-<style>
-.wip-container {
-  text-align: center;
-  padding: 120px 0;
-  font-family: 'Inter', sans-serif;
-}
-.wip-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-  border-right: 3px solid #000;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: blink 0.7s step-end infinite;
-}
-@keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: black; }
-}
-.wip-note {
-  color: #666;
-  font-size: 1rem;
-}
-</style>
+    </section>
+    <!-- Outcome -->
+    <section class="section-block" id="process">
+      <div class="section-head">
+        <div class="section-label">Outcome</div>
+        <h2 class="section-title">A Pilot Mapping Result and its Implications.</h2>
+      </div>
 
-<script>
-const text = "Work in progress...";
-let i = 0;
-let isDeleting = false;
-const speed = 100; // 타이핑 속도
-const delay = 1500; // 타이핑 완료 후 멈춤 시간
+      <p class="section-body">
+        Using the Medical Research Council’s framework for developing and evaluating complex interventions (Skivington et al., 2024), 
+        the key regulations were translated into an interpretable guideline. Although this exploratory mapping provides a simplified 
+        view of the regulatory landscape, embedding it into the design process can support more implementable and responsible design 
+        practice. In addition, reframing regulatory compliance as a guiding design tool enables designers to leverage regulatory insights 
+        to support innovation and informed decision-making throughout the design process. 
+      </p>
 
-function loopTyping() {
-  const typingElement = document.getElementById("typing");
-  
-  if (!isDeleting && i < text.length) {
-    typingElement.textContent += text.charAt(i);
-    i++;
-    setTimeout(loopTyping, speed);
-  } else if (isDeleting && i > 0) {
-    typingElement.textContent = text.substring(0, i - 1);
-    i--;
-    setTimeout(loopTyping, speed / 2);
-  } else if (i === text.length && !isDeleting) {
-    isDeleting = true;
-    setTimeout(loopTyping, delay);
-  } else if (i === 0 && isDeleting) {
-    isDeleting = false;
-    setTimeout(loopTyping, speed);
-  }
-}
+      <figure class="section-figure">
+        <img class="fit" src="assets/projects/regulationmapping/regulationmapping.outcome.jpg" alt="A pilot result of the mapping approach" loading="lazy" />
+        <figcaption class="section-caption"> A Pilot Result of the Mapping Appoach.</figcaption>
+      </figure>
 
-loopTyping();
-</script>
+    </section>
+
+
+    <!-- Explore my other projects (가로 스크롤 캐러셀) -->
+    <section class="explore-rail" aria-label="Explore my other projects">
+      <h3>Explore my other projects</h3>
+
+      <!-- 좌/우 버튼 -->
+      <button class="explore-nav explore-prev" aria-label="Scroll left">‹</button>
+      <button class="explore-nav explore-next" aria-label="Scroll right">›</button>
+
+      <!-- 스크롤 트랙 -->
+      <div class="explore-track" id="exploreTrack">
+        <!-- 현재 페이지 외 7개 카드 넣기 -->
+        <a class="explore-card" href="projects-referralroadmap.html" title="Referral Roadmap">
+          <img src="assets/projects/referralroadmap/referralroadmap.cover.jpg" alt="Referral Roadmap" />
+          <div class="overlay"></div><div class="label">Referral Roadmap</div>
+        </a>
+
+        <a class="explore-card" href="projects-hospitalhero.html" title="Hospital Hero">
+          <img src="assets/projects/hospitalhero/hospitalhero.cover.jpg" alt="Hospital Hero" />
+          <div class="overlay"></div><div class="label">Hospital Hero</div>
+        </a>
+
+        <a class="explore-card" href="projects-hospitalk.html" title="HospiTALK">
+          <img src="assets/projects/hospitalk/hospitalk.cover.jpg" alt="HospiTALK" />
+          <div class="overlay"></div><div class="label">HospiTALK</div>
+        </a>
+
+        <a class="explore-card" href="projects-tutum.html" title="Tutum">
+          <img src="assets/projects/tutum/tutum.cover.jpg" alt="Tutum" />
+          <div class="overlay"></div><div class="label">Tutum</div>
+        </a>
+
+        <a class="explore-card" href="projects-corney.html" title="Corney">
+          <img src="assets/projects/corney/corney.cover.jpg" alt="Corney" />
+          <div class="overlay"></div><div class="label">Corney</div>
+        </a>
+
+        <!-- 필요 시 더 추가 -->
+        <a class="explore-card" href="projects-soundcushion.html" title="Sound Cushion">
+          <img src="assets/projects/soundcushion/soundcushion.cover.jpg" alt="Sound Cushion" />
+          <div class="overlay"></div><div class="label">Sound Cushion</div>
+        </a>
+
+      </div>
+    </section>
+    <div class="spacer-80"></div>
+    <a href="/projects.html" class="nav-arrow back">← Back to Projects</a>
+    </section>
+  </main>
+
+  <!-- Explore 캐러셀 스크립트 -->
+  <script>
+    (function () {
+      const track = document.getElementById('exploreTrack');
+      const prev  = document.querySelector('.explore-prev');
+      const next  = document.querySelector('.explore-next');
+
+      function cardWidth() {
+        const card = track.querySelector('.explore-card');
+        if (!card) return 300;
+        const styles = getComputedStyle(card);
+        return card.getBoundingClientRect().width + parseFloat(styles.marginRight || 16);
+      }
+
+      prev.addEventListener('click', () => track.scrollBy({ left: -cardWidth() * 1.2, behavior: 'smooth' }));
+      next.addEventListener('click', () => track.scrollBy({ left:  cardWidth() * 1.2, behavior: 'smooth' }));
+
+      // 드래그 스크롤
+      let isDown = false, startX = 0, startLeft = 0;
+      track.addEventListener('mousedown', e => { isDown = true; startX = e.pageX; startLeft = track.scrollLeft; });
+      window.addEventListener('mouseup',   () => { isDown = false; });
+      track.addEventListener('mouseleave', () => { isDown = false; });
+      track.addEventListener('mousemove',  e => {
+        if (!isDown) return;
+        e.preventDefault();
+        track.scrollLeft = startLeft - (e.pageX - startX);
+      });
+
+      // 수직 휠을 가로 스크롤로
+      track.addEventListener('wheel', e => {
+        if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
+          track.scrollLeft += e.deltaY;
+          e.preventDefault();
+        }
+      }, { passive: false });
+    })();
+  </script>
+</body>
+</html>
